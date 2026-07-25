@@ -1,0 +1,22 @@
+/*
+Theme Name: Erawat Enterprise
+Theme URI: https://erawatenterprise.com
+Author: Erawat Enterprise
+Author URI: https://erawatenterprise.com
+Description: Professional WordPress theme for Erawat Enterprise — Trusted Wooden Packaging Solutions for Solar & Industrial Sectors. ISPM 15 Certified.
+Version: 1.0.0
+Requires at least: 5.8
+Tested up to: 6.5
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: erawat-enterprise
+Tags: business, industrial, packaging, solar, wooden-boxes, blue, green, brown
+*/
+
+/* Base reset — actual styles live in assets/css/erawat-style.css */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; }
+ul { list-style: none; }
