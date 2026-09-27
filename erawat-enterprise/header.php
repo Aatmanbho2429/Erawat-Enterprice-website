@@ -15,13 +15,13 @@
 <div class="top-bar">
     <div class="container top-bar__inner">
         <div class="top-bar__left">
-            <a href="tel:+919876543210" class="top-bar__link">
+            <a href="tel:+918849776778" class="top-bar__link">
                 <i class="fas fa-phone-alt"></i>
-                <span>+91 98765 43210</span>
+                <span>+91 88497 76778</span>
             </a>
-            <a href="mailto:info@erawatenterprise.com" class="top-bar__link">
+            <a href="mailto:Erawat005@gmail.com" class="top-bar__link">
                 <i class="fas fa-envelope"></i>
-                <span>info@erawatenterprise.com</span>
+                <span>Erawat005@gmail.com</span>
             </a>
             <span class="top-bar__link">
                 <i class="fas fa-map-marker-alt"></i>
@@ -98,8 +98,8 @@
             ] );
             ?>
             <div class="mobile-nav__footer">
-                <a href="tel:+919876543210" class="mobile-nav__contact">
-                    <i class="fas fa-phone-alt"></i> +91 98765 43210
+                <a href="tel:+918849776778" class="mobile-nav__contact">
+                    <i class="fas fa-phone-alt"></i> +91 88497 76778
                 </a>
                 <a href="<?php echo esc_url( home_url('/contact-us') ); ?>" class="btn btn--primary w-full">Get a Quote</a>
             </div>

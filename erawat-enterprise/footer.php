@@ -10,7 +10,7 @@
                 <a href="<?php echo esc_url( home_url('/contact-us') ); ?>" class="btn btn--white btn--lg">
                     <i class="fas fa-clipboard-list"></i> Request a Quote
                 </a>
-                <a href="tel:+919876543210" class="btn btn--outline-white btn--lg">
+                <a href="tel:+918849776778" class="btn btn--outline-white btn--lg">
                     <i class="fas fa-phone-alt"></i> Call Us Now
                 </a>
             </div>
@@ -80,15 +80,13 @@
                     <li>
                         <i class="fas fa-phone-alt"></i>
                         <span>
-                            <a href="tel:+919876543210">+91 98765 43210</a><br>
-                            <a href="tel:+919876543211">+91 98765 43211</a>
+                            <a href="tel:+918849776778">+91 88497 76778</a>
                         </span>
                     </li>
                     <li>
                         <i class="fas fa-envelope"></i>
                         <span>
-                            <a href="mailto:info@erawatenterprise.com">info@erawatenterprise.com</a><br>
-                            <a href="mailto:sales@erawatenterprise.com">sales@erawatenterprise.com</a>
+                            <a href="mailto:Erawat005@gmail.com">Erawat005@gmail.com</a>
                         </span>
                     </li>
                     <li>

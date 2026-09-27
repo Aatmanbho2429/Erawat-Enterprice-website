@@ -83,16 +83,6 @@
                 <p>Export contracts often include delivery date guarantees. Compliance failures that cause delays can trigger penalty clauses and damage your reputation.</p>
             </div>
         </div>
-        <div class="ispm-solution-bar" data-aos="fade-up">
-            <div class="ispm-solution-bar__content">
-                <i class="fas fa-shield-alt"></i>
-                <div>
-                    <strong>The Solution is Simple</strong>
-                    <p>Partner with Erawat Enterprise — every wooden package we supply is ISPM 15 compliant before it leaves our factory. You never have to worry about customs compliance again.</p>
-                </div>
-            </div>
-            <a href="<?php echo esc_url(home_url('/contact-us')); ?>" class="btn btn--primary btn--md">Get Compliant Now</a>
-        </div>
     </div>
 </section>
 
@@ -317,25 +307,6 @@
                     <p>ISPM 15 is strictly an international trade requirement. For domestic shipments within India, there is no legal mandate to use ISPM 15 certified packaging. However, some clients choose to use it for domestic shipments to maintain consistent packaging standards across their supply chain and to keep packaging available for use in both domestic and export orders.</p>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- ══════════════ ISPM CTA ══════════════ -->
-<section class="section section--cream">
-    <div class="container text-center" data-aos="fade-up">
-        <h2>Need ISPM 15 Certified Packaging for Your Next Export?</h2>
-        <p class="mt-3 max-600 mx-auto">
-            Don't risk customs delays and financial losses. Partner with Erawat Enterprise —
-            your ISPM 15 compliant wooden packaging will be ready on time and fully documented.
-        </p>
-        <div class="mt-5">
-            <a href="<?php echo esc_url(home_url('/contact-us')); ?>" class="btn btn--primary btn--lg mr-3">
-                <i class="fas fa-clipboard-list"></i> Get ISPM 15 Quote
-            </a>
-            <a href="tel:+919876543210" class="btn btn--outline-primary btn--lg">
-                <i class="fas fa-phone-alt"></i> +91 98765 43210
-            </a>
         </div>
     </div>
 </section>

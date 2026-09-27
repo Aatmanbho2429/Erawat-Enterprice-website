@@ -204,7 +204,7 @@
             <a href="<?php echo esc_url(home_url('/contact-us')); ?>" class="btn btn--white btn--lg mr-3">
                 <i class="fas fa-clipboard-list"></i> Get a Service Quote
             </a>
-            <a href="tel:+919876543210" class="btn btn--outline-white btn--lg">
+            <a href="tel:+918849776778" class="btn btn--outline-white btn--lg">
                 <i class="fas fa-phone-alt"></i> Speak to Our Team
             </a>
         </div>

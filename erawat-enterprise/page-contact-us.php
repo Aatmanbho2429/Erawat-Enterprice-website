@@ -11,18 +11,14 @@
                     <i class="fas fa-phone-alt"></i>
                 </div>
                 <h4>Call Us</h4>
-                <p><a href="tel:+919876543210">+91 98765 43210</a></p>
-                <p><a href="tel:+919876543211">+91 98765 43211</a></p>
-                <span class="contact-info-card__note">Mon – Sat, 9 AM – 6 PM</span>
+                <p><a href="tel:+918849776778">+91 88497 76778</a></p>
             </div>
             <div class="contact-info-card">
                 <div class="contact-info-card__icon" style="background: var(--forest);">
                     <i class="fas fa-envelope"></i>
                 </div>
                 <h4>Email Us</h4>
-                <p><a href="mailto:info@erawatenterprise.com">info@erawatenterprise.com</a></p>
-                <p><a href="mailto:sales@erawatenterprise.com">sales@erawatenterprise.com</a></p>
-                <span class="contact-info-card__note">Response within 24 hours</span>
+                <p><a href="mailto:Erawat005@gmail.com">Erawat005@gmail.com</a></p>
             </div>
             <div class="contact-info-card">
                 <div class="contact-info-card__icon" style="background: var(--wood);">
@@ -37,7 +33,7 @@
                     <i class="fab fa-whatsapp"></i>
                 </div>
                 <h4>WhatsApp</h4>
-                <p><a href="https://wa.me/919876543210" target="_blank" rel="noopener">+91 98765 43210</a></p>
+                <p><a href="https://wa.me/918849776778" target="_blank" rel="noopener">+91 88497 76778</a></p>
                 <p>Send your specs &amp; get a quick quote</p>
                 <span class="contact-info-card__note">Fast response via WhatsApp</span>
             </div>
@@ -56,7 +52,7 @@
                     <span class="section-eyebrow">Send An Enquiry</span>
                     <h2 class="section-title">Get Your Free Quote</h2>
                     <div class="title-divider"></div>
-                    <p>Fill in your details and our packaging engineers will contact you within 24 hours with a tailored quote and design recommendation.</p>
+                    <p>Fill in your details and our packaging engineers will contact you with a tailored quote and design recommendation.</p>
                 </div>
 
                 <form class="contact-form" id="main-contact-form">
@@ -136,12 +132,6 @@
 
                 <!-- Quick Contact Details -->
                 <div class="contact-side__details">
-                    <h4>Business Hours</h4>
-                    <div class="hours-grid">
-                        <span>Monday – Friday</span><span>9:00 AM – 6:00 PM</span>
-                        <span>Saturday</span><span>9:00 AM – 2:00 PM</span>
-                        <span>Sunday</span><span>Closed</span>
-                    </div>
                     <div class="contact-side__social mt-4">
                         <h4>Connect With Us</h4>
                         <div class="social-links-row">
@@ -151,47 +141,12 @@
                             <a href="#" class="social-link-lg" aria-label="Facebook">
                                 <i class="fab fa-facebook-f"></i> Facebook
                             </a>
-                            <a href="https://wa.me/919876543210" class="social-link-lg" aria-label="WhatsApp" target="_blank" rel="noopener">
+                            <a href="https://wa.me/918849776778" class="social-link-lg" aria-label="WhatsApp" target="_blank" rel="noopener">
                                 <i class="fab fa-whatsapp"></i> WhatsApp
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ══════════════ WHY ENQUIRE ══════════════ -->
-<section class="section">
-    <div class="container">
-        <div class="section-header text-center" data-aos="fade-up">
-            <h2 class="section-title">What Happens When You Contact Us?</h2>
-            <div class="title-divider center"></div>
-        </div>
-        <div class="enquiry-process" data-aos="fade-up" data-aos-delay="100">
-            <div class="eq-step">
-                <div class="eq-step__icon"><i class="fas fa-paper-plane"></i></div>
-                <h4>1. You Send Your Enquiry</h4>
-                <p>Share your product details, dimensions, quantity, and destination via our form, email, or WhatsApp.</p>
-            </div>
-            <div class="eq-arrow"><i class="fas fa-chevron-right"></i></div>
-            <div class="eq-step">
-                <div class="eq-step__icon"><i class="fas fa-user-tie"></i></div>
-                <h4>2. Engineer Contacts You</h4>
-                <p>Within 24 hours, one of our packaging engineers calls you to discuss your requirements in detail.</p>
-            </div>
-            <div class="eq-arrow"><i class="fas fa-chevron-right"></i></div>
-            <div class="eq-step">
-                <div class="eq-step__icon"><i class="fas fa-file-invoice"></i></div>
-                <h4>3. You Receive a Quote</h4>
-                <p>A detailed quote with dimensions, material specifications, ISPM 15 status, and pricing — within 24 hours of the call.</p>
-            </div>
-            <div class="eq-arrow"><i class="fas fa-chevron-right"></i></div>
-            <div class="eq-step">
-                <div class="eq-step__icon"><i class="fas fa-thumbs-up"></i></div>
-                <h4>4. We Begin Production</h4>
-                <p>On your approval, we start manufacturing immediately. Regular updates throughout production.</p>
             </div>
         </div>
     </div>

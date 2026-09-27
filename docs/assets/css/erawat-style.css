@@ -2709,6 +2709,9 @@ a:hover { color: var(--forest); }
   .site-header__cta  { display: none; }
   .mobile-menu-toggle { display: flex; }
 
+  /* Decorative 3D crate — desktop only; it sits behind the hero copy on narrow screens */
+  .hero-crate { display: none; }
+
   .about-snippet__grid  { grid-template-columns: 1fr; }
   .about-story__grid    { grid-template-columns: 1fr; }
   .home-contact__grid   { grid-template-columns: 1fr; }

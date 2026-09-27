@@ -6,11 +6,11 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 define( 'ERAWAT_VERSION', '1.0.0' );
+define( 'ERAWAT_DIR', get_template_directory() );
+define( 'ERAWAT_URI', get_template_directory_uri() );
 
 /* Auto-create pages on theme activation */
 require_once ERAWAT_DIR . '/inc/setup-pages.php';
-define( 'ERAWAT_DIR', get_template_directory() );
-define( 'ERAWAT_URI', get_template_directory_uri() );
 
 /* ──────────────────────────────────────────────
    THEME SETUP
