@@ -11,7 +11,7 @@
                     <i class="fas fa-phone-alt"></i>
                 </div>
                 <h4>Call Us</h4>
-                <p><a href="tel:+918849776778">+91 88497 76778</a></p>
+                <p><a href="tel:+919931060355">+91 99310 60355</a></p>
             </div>
             <div class="contact-info-card">
                 <div class="contact-info-card__icon" style="background: var(--forest);">
@@ -33,7 +33,7 @@
                     <i class="fab fa-whatsapp"></i>
                 </div>
                 <h4>WhatsApp</h4>
-                <p><a href="https://wa.me/918849776778" target="_blank" rel="noopener">+91 88497 76778</a></p>
+                <p><a href="https://wa.me/919931060355" target="_blank" rel="noopener">+91 99310 60355</a></p>
                 <p>Send your specs &amp; get a quick quote</p>
                 <span class="contact-info-card__note">Fast response via WhatsApp</span>
             </div>
@@ -135,13 +135,10 @@
                     <div class="contact-side__social mt-4">
                         <h4>Connect With Us</h4>
                         <div class="social-links-row">
-                            <a href="#" class="social-link-lg" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/in/erawat-enterprise-145601431" target="_blank" rel="noopener" class="social-link-lg" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin-in"></i> LinkedIn
                             </a>
-                            <a href="#" class="social-link-lg" aria-label="Facebook">
-                                <i class="fab fa-facebook-f"></i> Facebook
-                            </a>
-                            <a href="https://wa.me/918849776778" class="social-link-lg" aria-label="WhatsApp" target="_blank" rel="noopener">
+                            <a href="https://wa.me/919931060355" class="social-link-lg" aria-label="WhatsApp" target="_blank" rel="noopener">
                                 <i class="fab fa-whatsapp"></i> WhatsApp
                             </a>
                         </div>

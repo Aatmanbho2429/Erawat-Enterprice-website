@@ -413,31 +413,6 @@
     </div>
 </section>
 
-<!-- ══════════════ TRUSTED CLIENTS ══════════════ -->
-<section class="section clients-section">
-    <div class="container">
-        <div class="section-header text-center" data-aos="fade-up">
-            <span class="section-eyebrow">Our Trusted Partners</span>
-            <h2 class="section-title">Powering India's Leading Solar Manufacturers</h2>
-            <div class="title-divider center"></div>
-        </div>
-        <div class="clients-logos" data-aos="fade-up" data-aos-delay="100">
-            <div class="client-logo-item"><span>Solar<strong>Tech</strong></span></div>
-            <div class="client-logo-item"><span>Green<strong>Energy</strong></span></div>
-            <div class="client-logo-item"><span>Sun<strong>Power</strong></span></div>
-            <div class="client-logo-item"><span>Renew<strong>Corp</strong></span></div>
-            <div class="client-logo-item"><span>Apex<strong>Solar</strong></span></div>
-            <div class="client-logo-item"><span>Bharat<strong>Exports</strong></span></div>
-            <div class="client-logo-item"><span>Desh<strong>Urja</strong></span></div>
-            <div class="client-logo-item"><span>Infinity<strong>Pack</strong></span></div>
-        </div>
-        <p class="clients-note text-center">
-            <i class="fas fa-info-circle"></i>
-            500+ companies across solar, industrial, pharma, and logistics sectors trust us with their packaging.
-        </p>
-    </div>
-</section>
-
 <!-- ══════════════ PROCESS STRIP ══════════════ -->
 <section class="section section--navy process-strip">
     <div class="container">

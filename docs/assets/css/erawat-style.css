@@ -2000,7 +2000,8 @@ a:hover { color: var(--forest); }
   font-family: var(--font-heading);
   font-size: 8rem;
   font-weight: 900;
-  color: rgba(255,255,255,.05);
+  color: rgba(255,255,255,.22);
+  text-shadow: 0 2px 12px rgba(0,0,0,.35);
   line-height: 1;
 }
 
@@ -2585,18 +2586,6 @@ a:hover { color: var(--forest); }
   100% { background-position: 300% 50%; }
 }
 
-/* 2. Rotating 3D wooden crate (hero decoration) */
-@keyframes rotateCrate {
-  0%   { transform: rotateX(-18deg) rotateY(0deg); }
-  100% { transform: rotateX(-18deg) rotateY(360deg); }
-}
-
-/* 3. Gentle float (3D crate wrapper) */
-@keyframes floatGentle {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-14px); }
-}
-
 /* 4. Solar panel glint sweep */
 @keyframes solarGlint {
   0%          { left: -150%; opacity: 0; }
@@ -2624,48 +2613,6 @@ a:hover { color: var(--forest); }
   0%, 100% { opacity: 0.3; }
   50% { opacity: 1; }
 }
-
-/* ─── HERO 3D CRATE (decorative packaging element) ─── */
-.hero-crate {
-  position: absolute;
-  right: 7%;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  z-index: 1;
-  animation: floatGentle 5s ease-in-out infinite;
-}
-
-.crate-3d {
-  width: 180px;
-  height: 180px;
-  position: relative;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-  animation: rotateCrate 12s linear infinite;
-}
-
-.crate-face {
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  border: 3px solid rgba(255,255,255,0.28);
-  background: rgba(13,124,111,0.08);
-}
-.crate-face::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    repeating-linear-gradient(0deg, rgba(255,255,255,0.1) 0, rgba(255,255,255,0.1) 2px, transparent 2px, transparent 22px),
-    repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0, rgba(255,255,255,0.07) 1px, transparent 1px, transparent 45px);
-}
-.crate-front  { transform: translateZ(90px); }
-.crate-back   { transform: translateZ(-90px) rotateY(180deg); }
-.crate-left   { transform: rotateY(-90deg) translateZ(90px); }
-.crate-right  { transform: rotateY(90deg) translateZ(90px); }
-.crate-top    { transform: rotateX(90deg) translateZ(90px); }
-.crate-bottom { transform: rotateX(-90deg) translateZ(90px); }
 
 /* Solar glint on hero eyebrow/badge */
 .hero__eyebrow {
@@ -2708,9 +2655,6 @@ a:hover { color: var(--forest); }
   .site-header__nav  { display: none; }
   .site-header__cta  { display: none; }
   .mobile-menu-toggle { display: flex; }
-
-  /* Decorative 3D crate — desktop only; it sits behind the hero copy on narrow screens */
-  .hero-crate { display: none; }
 
   .about-snippet__grid  { grid-template-columns: 1fr; }
   .about-story__grid    { grid-template-columns: 1fr; }
@@ -2951,3 +2895,97 @@ a:hover { color: var(--forest); }
   .contact-cards { grid-template-columns: 1fr; }
   .enquiry-steps  { gap: 1rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   PHOTOGRAPHY — mirrors the theme (assets/images is symlinked)
+═══════════════════════════════════════════════════════════════ */
+.hero__bg {
+  background-image: url('../images/hero.jpg');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+.page-banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.banner--about    { background-image: url('../images/banner-about.jpg'); }
+.banner--products { background-image: url('../images/banner-products.jpg'); }
+.banner--services { background-image: url('../images/banner-services.jpg'); }
+.banner--ispm     { background-image: url('../images/banner-ispm.jpg'); }
+.banner--contact  { background-image: url('../images/banner-contact.jpg'); }
+.page-banner::before { opacity: 0.45; }
+.page-banner::after  { opacity: 0.5; }
+.page-banner .banner-overlay {
+  background: linear-gradient(135deg, rgba(10,22,40,.74) 0%, rgba(27,60,114,.56) 100%);
+}
+.product-card__img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.product-card__img--solar   { background-image: url('../images/product-solar.jpg'); }
+.product-card__img--pallets { background-image: url('../images/product-pallets.jpg'); }
+.product-card__img--crates  { background-image: url('../images/product-crates.jpg'); }
+.product-card__img--plywood { background-image: url('../images/product-plywood.jpg'); }
+.product-card__img--custom  { background-image: url('../images/product-custom.jpg'); }
+.product-card__img--solar::after,
+.product-card__img--pallets::after,
+.product-card__img--crates::after,
+.product-card__img--plywood::after,
+.product-card__img--custom::after { display: none; }
+.about-visual-card__img--wood {
+  background-image: url('../images/about-workshop.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.about-visual-card__img--wood::before,
+.about-visual-card__img--wood::after { display: none; }
+
+/* ─── Product Range detail images ─── */
+.product-detail__img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.product-detail__img--solar   { background-image: url('../images/detail-solar.jpg'); }
+.product-detail__img--pallets { background-image: url('../images/detail-pallets.jpg'); }
+.product-detail__img--crates  { background-image: url('../images/detail-crates.jpg'); }
+.product-detail__img--plywood { background-image: url('../images/detail-plywood.jpg'); }
+.product-detail__img--custom  { background-image: url('../images/detail-custom.jpg'); }
+
+/* ─── Services panels ─── */
+.service-detail__icon-panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.service-panel--manufacturing { background-image: url('../images/service-manufacturing.jpg'); }
+.service-panel--heattreatment { background-image: url('../images/service-heattreatment.jpg'); }
+.service-panel--design        { background-image: url('../images/service-design.jpg'); }
+.service-panel--logistics     { background-image: url('../images/service-logistics.jpg'); }
+.service-panel--onsite        { background-image: url('../images/service-onsite.jpg'); }
+
+/* Tint the photo so the white icon and label stay readable */
+.service-detail__icon-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(10,22,40,.72) 0%, rgba(27,60,114,.55) 100%);
+  z-index: 0;
+}
+.service-panel--green::before { background: linear-gradient(135deg, rgba(14,61,37,.72) 0%, rgba(26,92,56,.55) 100%); }
+.service-panel--brown::before { background: linear-gradient(135deg, rgba(92,53,32,.72) 0%, rgba(123,74,45,.55) 100%); }
+.service-detail__icon-panel > * { position: relative; z-index: 1; }
+
+/* ─── About Us story image ─── */
+.story-img--factory {
+  background-image: url('../images/story-factory.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.story-img--factory::after { display: none; }

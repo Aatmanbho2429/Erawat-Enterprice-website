@@ -203,23 +203,4 @@
     </div>
 </section>
 
-<!-- ══════════════ PRODUCT CTA ══════════════ -->
-<section class="section section--navy">
-    <div class="container text-center" data-aos="fade-up">
-        <h2 class="text-white">Don't See Exactly What You Need?</h2>
-        <p class="text-white mt-3 max-600 mx-auto">
-            We manufacture bespoke wooden packaging for any industry and any product.
-            Get in touch with our engineering team — we'll design the perfect solution for you.
-        </p>
-        <div class="mt-5">
-            <a href="<?php echo esc_url(home_url('/contact-us')); ?>" class="btn btn--white btn--lg mr-3">
-                <i class="fas fa-clipboard-list"></i> Request Custom Quote
-            </a>
-            <a href="tel:+918849776778" class="btn btn--outline-white btn--lg">
-                <i class="fas fa-phone-alt"></i> Call Our Engineers
-            </a>
-        </div>
-    </div>
-</section>
-
 <?php get_footer(); ?>

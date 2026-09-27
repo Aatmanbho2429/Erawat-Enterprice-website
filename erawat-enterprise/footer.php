@@ -10,7 +10,7 @@
                 <a href="<?php echo esc_url( home_url('/contact-us') ); ?>" class="btn btn--white btn--lg">
                     <i class="fas fa-clipboard-list"></i> Request a Quote
                 </a>
-                <a href="tel:+918849776778" class="btn btn--outline-white btn--lg">
+                <a href="tel:+919931060355" class="btn btn--outline-white btn--lg">
                     <i class="fas fa-phone-alt"></i> Call Us Now
                 </a>
             </div>
@@ -36,10 +36,8 @@
                     <span class="cert-badge"><i class="fas fa-shield-alt"></i> ISO Compliant</span>
                 </div>
                 <div class="footer-social">
-                    <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="WhatsApp" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/erawat-enterprise-145601431" aria-label="LinkedIn" class="social-link" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/919931060355" aria-label="WhatsApp" class="social-link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
 
@@ -80,7 +78,7 @@
                     <li>
                         <i class="fas fa-phone-alt"></i>
                         <span>
-                            <a href="tel:+918849776778">+91 88497 76778</a>
+                            <a href="tel:+919931060355">+91 99310 60355</a>
                         </span>
                     </li>
                     <li>

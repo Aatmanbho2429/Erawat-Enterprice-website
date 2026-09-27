@@ -15,9 +15,9 @@
 <div class="top-bar">
     <div class="container top-bar__inner">
         <div class="top-bar__left">
-            <a href="tel:+918849776778" class="top-bar__link">
+            <a href="tel:+919931060355" class="top-bar__link">
                 <i class="fas fa-phone-alt"></i>
-                <span>+91 88497 76778</span>
+                <span>+91 99310 60355</span>
             </a>
             <a href="mailto:Erawat005@gmail.com" class="top-bar__link">
                 <i class="fas fa-envelope"></i>
@@ -34,9 +34,8 @@
                 ISPM 15 Certified
             </span>
             <div class="top-bar__social">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/erawat-enterprise-145601431" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/919931060355" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </div>
@@ -98,8 +97,8 @@
             ] );
             ?>
             <div class="mobile-nav__footer">
-                <a href="tel:+918849776778" class="mobile-nav__contact">
-                    <i class="fas fa-phone-alt"></i> +91 88497 76778
+                <a href="tel:+919931060355" class="mobile-nav__contact">
+                    <i class="fas fa-phone-alt"></i> +91 99310 60355
                 </a>
                 <a href="<?php echo esc_url( home_url('/contact-us') ); ?>" class="btn btn--primary w-full">Get a Quote</a>
             </div>

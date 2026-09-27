@@ -20,7 +20,7 @@
 <section class="section service-detail" id="custom-manufacturing">
     <div class="container">
         <div class="service-detail__grid">
-            <div class="service-detail__icon-panel service-panel--blue" data-aos="fade-right">
+            <div class="service-detail__icon-panel service-panel--blue service-panel--manufacturing" data-aos="fade-right">
                 <i class="fas fa-tools"></i>
                 <h3>Custom Wooden Packaging Manufacturing</h3>
                 <div class="service-panel__num">01</div>
@@ -77,7 +77,7 @@
                     <div class="sh-item"><i class="fas fa-check-circle"></i> Fast turnaround for urgent shipments</div>
                 </div>
             </div>
-            <div class="service-detail__icon-panel service-panel--green" data-aos="fade-left">
+            <div class="service-detail__icon-panel service-panel--green service-panel--heattreatment" data-aos="fade-left">
                 <i class="fas fa-fire"></i>
                 <h3>ISPM 15 Heat Treatment</h3>
                 <div class="service-panel__num">02</div>
@@ -90,7 +90,7 @@
 <section class="section service-detail" id="design-engineering">
     <div class="container">
         <div class="service-detail__grid">
-            <div class="service-detail__icon-panel service-panel--brown" data-aos="fade-right">
+            <div class="service-detail__icon-panel service-panel--brown service-panel--design" data-aos="fade-right">
                 <i class="fas fa-drafting-compass"></i>
                 <h3>Packaging Design &amp; Engineering</h3>
                 <div class="service-panel__num">03</div>
@@ -147,7 +147,7 @@
                     <div class="sh-item"><i class="fas fa-check-circle"></i> Volume pricing discounts</div>
                 </div>
             </div>
-            <div class="service-detail__icon-panel service-panel--blue" data-aos="fade-left">
+            <div class="service-detail__icon-panel service-panel--blue service-panel--logistics" data-aos="fade-left">
                 <i class="fas fa-truck"></i>
                 <h3>Bulk Supply &amp; Logistics</h3>
                 <div class="service-panel__num">04</div>
@@ -160,7 +160,7 @@
 <section class="section service-detail" id="on-site-packing">
     <div class="container">
         <div class="service-detail__grid">
-            <div class="service-detail__icon-panel service-panel--green" data-aos="fade-right">
+            <div class="service-detail__icon-panel service-panel--green service-panel--onsite" data-aos="fade-right">
                 <i class="fas fa-hard-hat"></i>
                 <h3>On-Site Packing Services</h3>
                 <div class="service-panel__num">05</div>
@@ -188,25 +188,6 @@
                     <div class="sh-item"><i class="fas fa-check-circle"></i> Pan-India availability</div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- ══════════════ SERVICE CTA ══════════════ -->
-<section class="section section--navy">
-    <div class="container text-center" data-aos="fade-up">
-        <h2 class="text-white">Ready to Streamline Your Packaging?</h2>
-        <p class="text-white mt-3 max-600 mx-auto">
-            Contact our team today to discuss your packaging requirements.
-            We'll design a service package that fits your needs and your budget.
-        </p>
-        <div class="mt-5">
-            <a href="<?php echo esc_url(home_url('/contact-us')); ?>" class="btn btn--white btn--lg mr-3">
-                <i class="fas fa-clipboard-list"></i> Get a Service Quote
-            </a>
-            <a href="tel:+918849776778" class="btn btn--outline-white btn--lg">
-                <i class="fas fa-phone-alt"></i> Speak to Our Team
-            </a>
         </div>
     </div>
 </section>
