@@ -58,13 +58,13 @@
             <div class="footer-col">
                 <h4 class="footer-col__title">Our Products</h4>
                 <ul class="footer-links">
-                    <li><a href="<?php echo esc_url(home_url('/product-range')); ?>"><i class="fas fa-chevron-right"></i> Solar Panel Wooden Boxes</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/product-range')); ?>"><i class="fas fa-chevron-right"></i> Export Wooden Pallets</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/product-range')); ?>"><i class="fas fa-chevron-right"></i> Industrial Wooden Crates</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/product-range')); ?>"><i class="fas fa-chevron-right"></i> Plywood Packaging Boxes</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/product-range')); ?>"><i class="fas fa-chevron-right"></i> Custom Wooden Packaging</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/ispm-15-packing')); ?>"><i class="fas fa-chevron-right"></i> Heat-Treated Export Packing</a></li>
-                </ul>
+                        <li><a href="<?php echo esc_url(home_url('/product-range')); ?>#warehousing-pallets"><i class="fas fa-chevron-right"></i> Warehousing Pallet Solutions</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/product-range')); ?>#on-site-packaging"><i class="fas fa-chevron-right"></i> On Site Packaging Service</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/product-range')); ?>#ispm-15-pallets"><i class="fas fa-chevron-right"></i> ISPM 15 Heat Treated Pallet</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/product-range')); ?>#packaging-consultation"><i class="fas fa-chevron-right"></i> Wooden Packaging Consultation</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/product-range')); ?>#plywood-pallets-boxes"><i class="fas fa-chevron-right"></i> Plywood Pallet &amp; Boxes</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/product-range')); ?>#customised-packaging"><i class="fas fa-chevron-right"></i> Customised Packaging</a></li>
+                    </ul>
             </div>
 
             <!-- Col 4 — Contact -->

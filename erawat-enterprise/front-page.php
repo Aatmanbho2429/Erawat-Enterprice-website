@@ -189,8 +189,8 @@
                 <div class="product-card__img product-card__img--solar"></div>
                 <div class="product-card__body">
                     <span class="product-card__tag">Bestseller</span>
-                    <h3>Solar Panel Wooden Boxes</h3>
-                    <p>Precision-built wooden crates engineered to protect solar modules during transit. Foam-lined interiors, reinforced corners, ISPM 15 certified timber.</p>
+                    <h3>Solar Renewable Energy Pallet</h3>
+                    <p>Heavy-duty close-boarded pallets sized for solar modules and inverters. Wide deck boards spread point loads across the panel face, and every pallet is ISPM 15 heat-treated and IPPC stamped for export.</p>
                     <a href="<?php echo esc_url(home_url('/product-range')); ?>" class="product-card__link">
                         View Details <i class="fas fa-arrow-right"></i>
                     </a>
@@ -200,8 +200,8 @@
             <div class="product-card">
                 <div class="product-card__img product-card__img--pallets"></div>
                 <div class="product-card__body">
-                    <h3>Export Wooden Pallets</h3>
-                    <p>Heat-treated pallets compliant with international import standards. Euro, standard, and custom sizes available for all load capacities.</p>
+                    <h3>Export &amp; Warehousing Pallets</h3>
+                    <p>Four-way entry pallets in Euro, standard and made-to-measure sizes. Kiln-dried and heat-treated for racking, block stacking and international despatch, with load ratings to match your cargo.</p>
                     <a href="<?php echo esc_url(home_url('/product-range')); ?>" class="product-card__link">
                         View Details <i class="fas fa-arrow-right"></i>
                     </a>
@@ -211,19 +211,8 @@
             <div class="product-card">
                 <div class="product-card__img product-card__img--crates"></div>
                 <div class="product-card__body">
-                    <h3>Industrial Wooden Crates</h3>
-                    <p>Heavy-duty crates for machinery, industrial equipment, and oversized cargo. Built to withstand rough handling and long-distance shipping.</p>
-                    <a href="<?php echo esc_url(home_url('/product-range')); ?>" class="product-card__link">
-                        View Details <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-card__img product-card__img--plywood"></div>
-                <div class="product-card__body">
-                    <h3>Plywood Packaging Boxes</h3>
-                    <p>Lightweight yet strong plywood boxes for electronics, automotive components, and consumer goods. Smooth finish, stackable design.</p>
+                    <h3>Wooden Boxes &amp; Wooden Crates</h3>
+                    <p>Open-slatted crates for ventilated, long or oversized loads, and fully enclosed cases for machinery and high-value equipment. Diagonally braced, battened and cleated to survive rough handling.</p>
                     <a href="<?php echo esc_url(home_url('/product-range')); ?>" class="product-card__link">
                         View Details <i class="fas fa-arrow-right"></i>
                     </a>
@@ -233,8 +222,8 @@
             <div class="product-card">
                 <div class="product-card__img product-card__img--custom"></div>
                 <div class="product-card__body">
-                    <h3>Custom Packaging Solutions</h3>
-                    <p>Bespoke wooden packaging designed from scratch to your exact specifications. We engineer around your product, not the other way around.</p>
+                    <h3>Multi Purpose Logistics Packaging</h3>
+                    <p>Plywood-panelled cases, skid bases and bespoke crating for awkward, heavy or irregular cargo. Engineered around your product's dimensions, weight distribution and transit route.</p>
                     <a href="<?php echo esc_url(home_url('/product-range')); ?>" class="product-card__link">
                         View Details <i class="fas fa-arrow-right"></i>
                     </a>

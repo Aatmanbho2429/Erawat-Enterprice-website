@@ -80,14 +80,13 @@
                         <label for="cf-product">Product / Service Required</label>
                         <select id="cf-product" name="product">
                             <option value="">— Select a product/service —</option>
-                            <option value="solar-boxes">Solar Panel Wooden Boxes</option>
-                            <option value="export-pallets">Export Wooden Pallets (ISPM 15)</option>
-                            <option value="industrial-crates">Industrial Wooden Crates</option>
-                            <option value="plywood-boxes">Plywood Packaging Boxes</option>
-                            <option value="custom">Custom Packaging Solution</option>
-                            <option value="ispm15-treatment">ISPM 15 Treatment of Existing Packaging</option>
-                            <option value="onsite-packing">On-Site Packing Services</option>
-                            <option value="other">Other — Please Describe</option>
+                                                    <option value="warehousing-pallets">Warehousing Pallet Solutions</option>
+                        <option value="on-site-packaging">On Site Packaging Service</option>
+                        <option value="ispm-15-pallets">ISPM 15 Heat Treated Pallet</option>
+                        <option value="packaging-consultation">Wooden Packaging Consultation</option>
+                        <option value="plywood-pallets-boxes">Plywood Pallet &amp; Boxes</option>
+                        <option value="customised-packaging">Customised Packaging</option>
+                        <option value="other">Other / Multiple Products</option>
                         </select>
                     </div>
                     <div class="form-row">
