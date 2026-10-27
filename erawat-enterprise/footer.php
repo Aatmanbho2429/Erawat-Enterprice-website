@@ -1,117 +1,121 @@
-<!-- ══════════════ CTA BAND ══════════════ -->
-<section class="cta-band">
+</main>
+
+<!-- ══════════════ CTA BAND (not on the Contact page — the form is already there) ══════════════ -->
+<?php if ( ! is_page( 'contact-us' ) ) : ?>
+<section class="cta-band" aria-labelledby="cta-band-title">
     <div class="container">
         <div class="cta-band__inner">
             <div class="cta-band__text">
-                <h2>Ready to Protect Your Solar Assets?</h2>
-                <p>Get a customised wooden packaging quote within 24 hours — ISPM 15 certified &amp; engineered to your specs.</p>
+                <h2 id="cta-band-title" data-split>Need solar pallets or box pallets?</h2>
+                <p data-aos="fade-up" data-aos-delay="200">Send your panel size and quantity, and we'll send you a quote.</p>
             </div>
-            <div class="cta-band__actions">
-                <a href="<?php echo esc_url( home_url('/contact-us') ); ?>" class="btn btn--white btn--lg">
-                    <i class="fas fa-clipboard-list"></i> Request a Quote
+            <div class="cta-band__actions" data-aos="fade-up" data-aos-delay="200">
+                <a href="<?php echo esc_url( erawat_url( 'contact-us' ) ); ?>" class="btn btn--white btn--lg" data-magnetic>
+                    Get a Quote <?php echo erawat_btn_circle(); // phpcs:ignore WordPress.Security.EscapeOutput ?>
                 </a>
-                <a href="tel:+919931060355" class="btn btn--outline-white btn--lg">
-                    <i class="fas fa-phone-alt"></i> Call Us Now
+                <a href="tel:<?php echo esc_attr( ERAWAT_PHONE_TEL ); ?>" class="btn btn--outline-white btn--lg">
+                    <i class="fas fa-phone-alt" aria-hidden="true"></i> Call Now
                 </a>
             </div>
         </div>
     </div>
 </section>
+<?php endif; ?>
 
 <!-- ══════════════ MAIN FOOTER ══════════════ -->
 <footer class="site-footer">
     <div class="container">
         <div class="site-footer__grid">
 
-            <!-- Col 1 — Brand -->
+            <!-- Brand -->
             <div class="footer-col footer-col--brand">
-                <div class="footer-logo">
-                    <span class="footer-logo__main">Erawat</span>
-                    <span class="footer-logo__sub">Enterprise</span>
-                </div>
-                <p class="footer-tagline">Crafting strength. Delivering trust.<br>Wooden packaging solutions since 2005.</p>
-                <div class="footer-certifications">
-                    <span class="cert-badge"><i class="fas fa-certificate"></i> ISPM 15 Certified</span>
-                    <span class="cert-badge"><i class="fas fa-leaf"></i> Eco-Responsible</span>
-                    <span class="cert-badge"><i class="fas fa-shield-alt"></i> ISO Compliant</span>
-                </div>
+                <a class="footer-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                    <img src="<?php echo esc_url( erawat_image_url( 'logo-erawat-white.png' ) ); ?>" alt="Erawat Enterprise" width="780" height="252" loading="lazy" decoding="async">
+                </a>
+                <p class="footer-tagline">Erawat Enterprise makes solar pallets, box pallets and custom wooden pallets for solar module makers and EPC companies across Gujarat and Rajasthan.</p>
+                <ul class="footer-badges">
+                    <li><i class="fas fa-ruler-combined" aria-hidden="true"></i> Made to Size</li>
+                    <li><i class="fas fa-temperature-high" aria-hidden="true"></i> ISPM 15 Heat Treatment</li>
+                    <li><i class="fas fa-truck-ramp-box" aria-hidden="true"></i> Bulk Orders</li>
+                </ul>
                 <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/erawat-enterprise-145601431" aria-label="LinkedIn" class="social-link" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/919931060355" aria-label="WhatsApp" class="social-link" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+                    <a href="<?php echo esc_url( ERAWAT_LINKEDIN ); ?>" aria-label="Erawat Enterprise on LinkedIn" class="social-link" target="_blank" rel="noopener"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                    <a href="<?php echo esc_url( ERAWAT_WHATSAPP ); ?>" aria-label="Chat with Erawat Enterprise on WhatsApp" class="social-link" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
                 </div>
             </div>
 
-            <!-- Col 2 — Quick Links -->
+            <!-- Products -->
             <div class="footer-col">
-                <h4 class="footer-col__title">Quick Links</h4>
+                <h3 class="footer-col__title">Products</h3>
                 <ul class="footer-links">
-                    <li><a href="<?php echo esc_url(home_url('/')); ?>"><i class="fas fa-chevron-right"></i> Home</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/about-us')); ?>"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/product-range')); ?>"><i class="fas fa-chevron-right"></i> Product Range</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/services')); ?>"><i class="fas fa-chevron-right"></i> Services</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/ispm-15-packing')); ?>"><i class="fas fa-chevron-right"></i> ISPM 15 Packing</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/contact-us')); ?>"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    <?php foreach ( erawat_products() as $slug => $product ) : ?>
+                        <li><a href="<?php echo esc_url( erawat_url( 'product-range' ) . '#' . $slug ); ?>"><?php echo esc_html( $product['name'] ); ?></a></li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
 
-            <!-- Col 3 — Products -->
+            <!-- Company -->
             <div class="footer-col">
-                <h4 class="footer-col__title">Our Products</h4>
+                <h3 class="footer-col__title">Company</h3>
                 <ul class="footer-links">
-                        <li><a href="<?php echo esc_url(home_url('/product-range')); ?>#warehousing-pallets"><i class="fas fa-chevron-right"></i> Warehousing Pallet Solutions</a></li>
-                        <li><a href="<?php echo esc_url(home_url('/product-range')); ?>#on-site-packaging"><i class="fas fa-chevron-right"></i> On Site Packaging Service</a></li>
-                        <li><a href="<?php echo esc_url(home_url('/product-range')); ?>#ispm-15-pallets"><i class="fas fa-chevron-right"></i> ISPM 15 Heat Treated Pallet</a></li>
-                        <li><a href="<?php echo esc_url(home_url('/product-range')); ?>#packaging-consultation"><i class="fas fa-chevron-right"></i> Wooden Packaging Consultation</a></li>
-                        <li><a href="<?php echo esc_url(home_url('/product-range')); ?>#plywood-pallets-boxes"><i class="fas fa-chevron-right"></i> Plywood Pallet &amp; Boxes</a></li>
-                        <li><a href="<?php echo esc_url(home_url('/product-range')); ?>#customised-packaging"><i class="fas fa-chevron-right"></i> Customised Packaging</a></li>
-                    </ul>
+                    <li><a href="<?php echo esc_url( erawat_url( 'about-us' ) ); ?>">About Us</a></li>
+                    <li><a href="<?php echo esc_url( erawat_url( 'services' ) ); ?>">Services</a></li>
+                    <li><a href="<?php echo esc_url( erawat_url( 'ispm-15-packing' ) ); ?>">ISPM 15 Packing</a></li>
+                    <li><a href="<?php echo esc_url( erawat_url( 'contact-us' ) ); ?>">Contact Us</a></li>
+                </ul>
             </div>
 
-            <!-- Col 4 — Contact -->
+            <!-- Contact -->
             <div class="footer-col">
-                <h4 class="footer-col__title">Get In Touch</h4>
+                <h3 class="footer-col__title">Contact</h3>
                 <ul class="footer-contact-list">
                     <li>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Plot No. XX, Industrial Area,<br>Gujarat — 380001, India</span>
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        <a href="tel:<?php echo esc_attr( ERAWAT_PHONE_TEL ); ?>"><?php echo esc_html( ERAWAT_PHONE ); ?></a>
                     </li>
                     <li>
-                        <i class="fas fa-phone-alt"></i>
-                        <span>
-                            <a href="tel:+919931060355">+91 99310 60355</a>
-                        </span>
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        <a href="<?php echo esc_url( ERAWAT_WHATSAPP ); ?>" target="_blank" rel="noopener">Chat on WhatsApp</a>
                     </li>
                     <li>
-                        <i class="fas fa-envelope"></i>
-                        <span>
-                            <a href="mailto:Erawat005@gmail.com">Erawat005@gmail.com</a>
-                        </span>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:<?php echo esc_attr( ERAWAT_EMAIL ); ?>"><?php echo esc_html( ERAWAT_EMAIL ); ?></a>
                     </li>
                     <li>
-                        <i class="fas fa-clock"></i>
-                        <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <span>Gujarat, India</span>
                     </li>
                 </ul>
             </div>
         </div>
+
+        <p class="footer-areas">Solar pallet &amp; box pallet supplier in <strong>Gujarat</strong> · <strong>Rajasthan</strong> · <strong>Jaipur</strong></p>
     </div>
+
+    <!-- Decorative wordmark -->
+    <div class="footer-wordmark" aria-hidden="true">Erawat</div>
 
     <!-- Footer Bottom -->
     <div class="footer-bottom">
         <div class="container footer-bottom__inner">
             <p class="footer-bottom__copy">
-                &copy; <?php echo date('Y'); ?> <strong>Erawat Enterprise</strong>. All rights reserved.
-            </p>
-            <p class="footer-bottom__note">
-                Proud Manufacturers of ISPM 15 Certified Wooden Packaging for the Solar Sector.
+                &copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> Erawat Enterprise. All rights reserved.
             </p>
         </div>
     </div>
 </footer>
 
-<!-- Back to Top -->
-<button class="back-to-top" id="back-to-top" aria-label="Back to top">
-    <i class="fas fa-chevron-up"></i>
+<!-- Floating actions -->
+<a class="whatsapp-float" href="<?php echo esc_url( ERAWAT_WHATSAPP ); ?>" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    <span class="whatsapp-float__label">Chat on WhatsApp</span>
+</a>
+<button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">
+    <svg class="back-to-top__ring" viewBox="0 0 44 44" aria-hidden="true" focusable="false">
+        <circle class="back-to-top__track" cx="22" cy="22" r="20.5"/>
+        <circle class="back-to-top__bar" cx="22" cy="22" r="20.5" pathLength="100"/>
+    </svg>
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
 </button>
 
 <?php wp_footer(); ?>

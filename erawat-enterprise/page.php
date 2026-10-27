@@ -3,7 +3,7 @@
 <?php erawat_page_banner(); ?>
 
 <section class="section default-page">
-    <div class="container">
+    <div class="container container--narrow">
         <div class="default-page__content">
             <?php
             while ( have_posts() ) :

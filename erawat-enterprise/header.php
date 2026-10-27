@@ -3,7 +3,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="<?php bloginfo('description'); ?>">
+    <script>document.documentElement.className += ' js';</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <?php wp_head(); ?>
@@ -11,38 +11,12 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<!-- ══════════════ TOP BAR ══════════════ -->
-<div class="top-bar">
-    <div class="container top-bar__inner">
-        <div class="top-bar__left">
-            <a href="tel:+919931060355" class="top-bar__link">
-                <i class="fas fa-phone-alt"></i>
-                <span>+91 99310 60355</span>
-            </a>
-            <a href="mailto:Erawat005@gmail.com" class="top-bar__link">
-                <i class="fas fa-envelope"></i>
-                <span>Erawat005@gmail.com</span>
-            </a>
-            <span class="top-bar__link">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Gujarat, India</span>
-            </span>
-        </div>
-        <div class="top-bar__right">
-            <span class="top-bar__cert">
-                <i class="fas fa-certificate"></i>
-                ISPM 15 Certified
-            </span>
-            <div class="top-bar__social">
-                <a href="https://www.linkedin.com/in/erawat-enterprise-145601431" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://wa.me/919931060355" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
+<a class="skip-link" href="#main"><?php esc_html_e( 'Skip to content', 'erawat-enterprise' ); ?></a>
 
 <!-- ══════════════ MAIN HEADER ══════════════ -->
 <header class="site-header" id="site-header">
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
     <div class="container site-header__inner">
 
         <!-- Logo -->
@@ -50,15 +24,14 @@
             <?php if ( has_custom_logo() ) : ?>
                 <?php the_custom_logo(); ?>
             <?php else : ?>
-                <a href="<?php echo esc_url( home_url('/') ); ?>" class="logo-text" rel="home">
-                    <span class="logo-text__main">Erawat</span>
-                    <span class="logo-text__sub">Enterprise</span>
+                <a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                    <img src="<?php echo esc_url( erawat_image_url( 'logo-erawat.png' ) ); ?>" alt="Erawat Enterprise" width="780" height="252">
                 </a>
             <?php endif; ?>
         </div>
 
         <!-- Primary Navigation -->
-        <nav class="site-header__nav" id="primary-nav" aria-label="Primary Navigation">
+        <nav class="site-header__nav" id="primary-nav" aria-label="<?php esc_attr_e( 'Primary Navigation', 'erawat-enterprise' ); ?>">
             <?php
             wp_nav_menu( [
                 'theme_location' => 'primary',
@@ -69,25 +42,30 @@
             ?>
         </nav>
 
-        <!-- Header CTA -->
+        <!-- Phone + CTA -->
         <div class="site-header__cta">
-            <a href="<?php echo esc_url( home_url('/contact-us') ); ?>" class="btn btn--primary btn--sm">
-                <i class="fas fa-clipboard-list"></i>
-                Get a Quote
+            <a href="tel:<?php echo esc_attr( ERAWAT_PHONE_TEL ); ?>" class="site-header__phone" aria-label="<?php echo esc_attr( 'Call ' . ERAWAT_PHONE ); ?>">
+                <i class="fas fa-phone-alt" aria-hidden="true"></i>
+            </a>
+            <a href="<?php echo esc_url( erawat_url( 'contact-us' ) ); ?>" class="btn btn--primary btn--sm site-header__quote">
+                <?php esc_html_e( 'Get a Quote', 'erawat-enterprise' ); ?>
+                <?php echo erawat_btn_circle(); // phpcs:ignore WordPress.Security.EscapeOutput ?>
             </a>
         </div>
 
         <!-- Mobile Menu Toggle -->
-        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
-            <span></span>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" type="button" aria-label="<?php esc_attr_e( 'Toggle Menu', 'erawat-enterprise' ); ?>" aria-expanded="false" aria-controls="mobile-nav">
             <span></span>
             <span></span>
         </button>
     </div>
+</header>
 
-    <!-- Mobile Nav Drawer -->
-    <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
-        <div class="mobile-nav__inner">
+<!-- Mobile drawer (outside the header so the frosted-glass header does not trap its fixed positioning) -->
+<div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <div class="mobile-nav__inner">
+        <nav aria-label="<?php esc_attr_e( 'Mobile Navigation', 'erawat-enterprise' ); ?>">
             <?php
             wp_nav_menu( [
                 'theme_location' => 'primary',
@@ -96,49 +74,58 @@
                 'fallback_cb'    => 'erawat_fallback_mobile_menu',
             ] );
             ?>
-            <div class="mobile-nav__footer">
-                <a href="tel:+919931060355" class="mobile-nav__contact">
-                    <i class="fas fa-phone-alt"></i> +91 99310 60355
-                </a>
-                <a href="<?php echo esc_url( home_url('/contact-us') ); ?>" class="btn btn--primary w-full">Get a Quote</a>
-            </div>
+        </nav>
+        <div class="mobile-nav__footer">
+            <a href="tel:<?php echo esc_attr( ERAWAT_PHONE_TEL ); ?>" class="mobile-nav__contact">
+                <i class="fas fa-phone-alt" aria-hidden="true"></i> <?php echo esc_html( ERAWAT_PHONE ); ?>
+            </a>
+            <a href="<?php echo esc_url( erawat_url( 'contact-us' ) ); ?>" class="btn btn--white btn--lg btn--full"><?php esc_html_e( 'Get a Quote', 'erawat-enterprise' ); ?> <?php echo erawat_btn_circle(); // phpcs:ignore WordPress.Security.EscapeOutput ?></a>
         </div>
     </div>
-    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
-</header>
+</div>
 
+<main id="main" class="site-main">
 <?php
+
+/**
+ * Hardcoded menu used until a menu is assigned to "Primary Navigation".
+ * Returns [ label, url, is_current ] rows.
+ */
+function erawat_fallback_menu_items() {
+    $items = [
+        [ 'Home',     '',                'home' ],
+        [ 'About Us', 'about-us',        'about-us' ],
+        [ 'Products', 'product-range',   'product-range' ],
+        [ 'Services', 'services',        'services' ],
+        [ 'ISPM 15',  'ispm-15-packing', 'ispm-15-packing' ],
+        [ 'Contact',  'contact-us',      'contact-us' ],
+    ];
+
+    $rows = [];
+    foreach ( $items as $item ) {
+        $is_current = ( 'home' === $item[2] ) ? is_front_page() : is_page( $item[2] );
+        $rows[]     = [ $item[0], erawat_url( $item[1] ), $is_current ];
+    }
+    return $rows;
+}
 
 /* Fallback menus */
 function erawat_fallback_menu() {
-    $pages = [
-        'Home'          => home_url('/'),
-        'About Us'      => home_url('/about-us'),
-        'Product Range' => home_url('/product-range'),
-        'Services'      => home_url('/services'),
-        'ISPM 15'       => home_url('/ispm-15-packing'),
-        'Contact Us'    => home_url('/contact-us'),
-    ];
     echo '<ul class="nav-menu">';
-    foreach ( $pages as $label => $url ) {
-        $active = ( rtrim( $_SERVER['REQUEST_URI'], '/' ) === parse_url( $url, PHP_URL_PATH ) ) ? ' class="current-menu-item"' : '';
-        echo '<li' . $active . '><a href="' . esc_url($url) . '">' . esc_html($label) . '</a></li>';
+    foreach ( erawat_fallback_menu_items() as $row ) {
+        $class = $row[2] ? ' class="current-menu-item"' : '';
+        $aria  = $row[2] ? ' aria-current="page"' : '';
+        echo '<li' . $class . '><a href="' . esc_url( $row[1] ) . '"' . $aria . '>' . esc_html( $row[0] ) . '</a></li>';
     }
     echo '</ul>';
 }
 
 function erawat_fallback_mobile_menu() {
-    $pages = [
-        'Home'          => home_url('/'),
-        'About Us'      => home_url('/about-us'),
-        'Product Range' => home_url('/product-range'),
-        'Services'      => home_url('/services'),
-        'ISPM 15 Packing' => home_url('/ispm-15-packing'),
-        'Contact Us'    => home_url('/contact-us'),
-    ];
     echo '<ul class="mobile-nav-menu">';
-    foreach ( $pages as $label => $url ) {
-        echo '<li><a href="' . esc_url($url) . '">' . esc_html($label) . '</a></li>';
+    foreach ( erawat_fallback_menu_items() as $row ) {
+        $class = $row[2] ? ' class="current-menu-item"' : '';
+        $aria  = $row[2] ? ' aria-current="page"' : '';
+        echo '<li' . $class . '><a href="' . esc_url( $row[1] ) . '"' . $aria . '>' . esc_html( $row[0] ) . '</a></li>';
     }
     echo '</ul>';
 }
