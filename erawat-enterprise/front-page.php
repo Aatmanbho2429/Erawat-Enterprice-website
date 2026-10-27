@@ -7,7 +7,7 @@
     <div class="container hero__inner">
         <div class="hero__content" data-aos="fade-up">
             <span class="hero__eyebrow">
-                <i class="fas fa-certificate"></i> ISPM 15 Certified Manufacturer
+                <i class="fas fa-certificate"></i>ISPM 15 Certified Manufacturer
             </span>
             <h1 class="hero__title">
                 Engineered Wooden Packaging<br>
