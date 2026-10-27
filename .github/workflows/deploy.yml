@@ -1,0 +1,33 @@
+# Uploads the erawat-enterprise/ theme to Hostinger whenever main changes.
+# The FTP account is locked to public_html/wp-content/themes/erawat-enterprise,
+# so server-dir is the account's own root.
+name: Deploy theme to Hostinger
+
+on:
+  push:
+    branches: [main]
+    paths: ['erawat-enterprise/**']
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Upload theme over FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./erawat-enterprise/
+          server-dir: ./
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.DS_Store

@@ -63,18 +63,18 @@ function erawat_enqueue_assets() {
         'erawat-main',
         ERAWAT_URI . '/assets/css/erawat-style.css',
         [ 'erawat-google-fonts', 'font-awesome' ],
-        ERAWAT_VERSION
+        filemtime( ERAWAT_DIR . '/assets/css/erawat-style.css' )
     );
 
     // Theme style.css (base reset)
-    wp_enqueue_style( 'erawat-style', get_stylesheet_uri(), [ 'erawat-main' ], ERAWAT_VERSION );
+    wp_enqueue_style( 'erawat-style', get_stylesheet_uri(), [ 'erawat-main' ], filemtime( ERAWAT_DIR . '/style.css' ) );
 
     // Main JS
     wp_enqueue_script(
         'erawat-script',
         ERAWAT_URI . '/assets/js/erawat-script.js',
         [ 'jquery' ],
-        ERAWAT_VERSION,
+        filemtime( ERAWAT_DIR . '/assets/js/erawat-script.js' ),
         true
     );
 
