@@ -5,12 +5,24 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'ERAWAT_VERSION', '1.5.0' );
+define( 'ERAWAT_VERSION', '2.0.0' );
 define( 'ERAWAT_DIR', get_template_directory() );
 define( 'ERAWAT_URI', get_template_directory_uri() );
 
+/* Contact details — single source for header, footer, contact page and schema */
+define( 'ERAWAT_PHONE',     '+91 99310 60355' );
+define( 'ERAWAT_PHONE_TEL', '+919931060355' );
+define( 'ERAWAT_WHATSAPP',  'https://wa.me/919931060355' );
+define( 'ERAWAT_EMAIL',     'Erawat005@gmail.com' );
+define( 'ERAWAT_LINKEDIN',  'https://www.linkedin.com/in/erawat-enterprise-145601431' );
+
 /* Auto-create pages on theme activation */
 require_once ERAWAT_DIR . '/inc/setup-pages.php';
+
+/* Product data and SEO */
+require_once ERAWAT_DIR . '/inc/products.php';
+require_once ERAWAT_DIR . '/inc/seo.php';
+require_once ERAWAT_DIR . '/inc/reviews.php';
 
 /* ──────────────────────────────────────────────
    THEME SETUP
@@ -42,10 +54,10 @@ add_action( 'after_setup_theme', 'erawat_theme_setup' );
    ENQUEUE ASSETS
 ────────────────────────────────────────────── */
 function erawat_enqueue_assets() {
-    // Google Fonts: Cinzel (Copperplate-style) + Open Sans body
+    // Google Fonts: Archivo (expanded headings) + Manrope (body) + Instrument Serif (accents)
     wp_enqueue_style(
         'erawat-google-fonts',
-        'https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap',
+        'https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=Manrope:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap',
         [],
         null
     );
@@ -73,7 +85,7 @@ function erawat_enqueue_assets() {
     wp_enqueue_script(
         'erawat-script',
         ERAWAT_URI . '/assets/js/erawat-script.js',
-        [ 'jquery' ],
+        [],
         filemtime( ERAWAT_DIR . '/assets/js/erawat-script.js' ),
         true
     );
@@ -84,6 +96,20 @@ function erawat_enqueue_assets() {
     ] );
 }
 add_action( 'wp_enqueue_scripts', 'erawat_enqueue_assets' );
+
+/**
+ * Preload the Home hero photo — it is the LCP image and is a CSS background, so the browser
+ * would not find it early on its own.
+ */
+function erawat_preload_hero() {
+    if ( is_front_page() ) {
+        printf(
+            '<link rel="preload" as="image" href="%s" fetchpriority="high">' . "\n",
+            esc_url( ERAWAT_URI . '/assets/images/hero.jpg' )
+        );
+    }
+}
+add_action( 'wp_head', 'erawat_preload_hero', 3 );
 
 /* ──────────────────────────────────────────────
    WIDGET AREAS
@@ -125,27 +151,56 @@ add_action( 'widgets_init', 'erawat_widgets_init' );
 function erawat_handle_contact_form() {
     check_ajax_referer( 'erawat_nonce', 'nonce' );
 
-    $name    = sanitize_text_field( $_POST['name']    ?? '' );
-    $email   = sanitize_email(      $_POST['email']   ?? '' );
-    $phone   = sanitize_text_field( $_POST['phone']   ?? '' );
-    $company = sanitize_text_field( $_POST['company'] ?? '' );
-    $message = sanitize_textarea_field( $_POST['message'] ?? '' );
+    $name     = sanitize_text_field( wp_unslash( $_POST['name']     ?? '' ) );
+    $phone    = sanitize_text_field( wp_unslash( $_POST['phone']    ?? '' ) );
+    $email    = sanitize_email( wp_unslash( $_POST['email']         ?? '' ) );
+    $company  = sanitize_text_field( wp_unslash( $_POST['company']  ?? '' ) );
+    $quantity = sanitize_text_field( wp_unslash( $_POST['quantity'] ?? '' ) );
+    $location = sanitize_text_field( wp_unslash( $_POST['location'] ?? '' ) );
+    $message  = sanitize_textarea_field( wp_unslash( $_POST['message'] ?? '' ) );
+    $product  = sanitize_key( wp_unslash( $_POST['product'] ?? '' ) );
 
-    if ( empty( $name ) || empty( $email ) || empty( $message ) ) {
-        wp_send_json_error( [ 'message' => 'Please fill in all required fields.' ] );
+    if ( '' === $name || '' === $phone || '' === $message ) {
+        wp_send_json_error( [ 'message' => 'Please fill in your name, phone number and requirements.' ] );
+    }
+
+    // Email is optional, but if it is given it must be valid.
+    $raw_email = sanitize_text_field( wp_unslash( $_POST['email'] ?? '' ) );
+    if ( '' !== $raw_email && ! is_email( $email ) ) {
+        wp_send_json_error( [ 'message' => 'Please enter a valid email address, or leave it blank.' ] );
+    }
+
+    // Product slug → readable name.
+    $products     = erawat_products();
+    $product_name = 'Not specified';
+    if ( isset( $products[ $product ] ) ) {
+        $product_name = $products[ $product ]['name'];
+    } elseif ( 'not-sure' === $product ) {
+        $product_name = 'Not sure yet';
     }
 
     $to      = get_option( 'admin_email' );
-    $subject = "New Enquiry from {$name} — Erawat Enterprise";
-    $body    = "Name: {$name}\nEmail: {$email}\nPhone: {$phone}\nCompany: {$company}\n\nMessage:\n{$message}";
-    $headers = [ "Reply-To: {$email}" ];
+    $subject = "New enquiry from {$name} — {$product_name}";
+    $body    = "Name: {$name}\n"
+             . "Phone: {$phone}\n"
+             . 'Email: ' . ( $email ? $email : '—' ) . "\n"
+             . 'Company: ' . ( $company ? $company : '—' ) . "\n"
+             . "Product: {$product_name}\n"
+             . 'Quantity: ' . ( $quantity ? $quantity : '—' ) . "\n"
+             . 'Delivery location: ' . ( $location ? $location : '—' ) . "\n\n"
+             . "Requirements:\n{$message}";
+
+    $headers = [];
+    if ( $email && is_email( $email ) ) {
+        $headers[] = "Reply-To: {$name} <{$email}>";
+    }
 
     $sent = wp_mail( $to, $subject, $body, $headers );
 
     if ( $sent ) {
-        wp_send_json_success( [ 'message' => 'Thank you! We will get back to you within 24 hours.' ] );
+        wp_send_json_success( [ 'message' => 'Thank you! We have received your enquiry and will reply shortly.' ] );
     } else {
-        wp_send_json_error( [ 'message' => 'Could not send message. Please try again or call us directly.' ] );
+        wp_send_json_error( [ 'message' => 'Could not send your enquiry. Please call or WhatsApp us on ' . ERAWAT_PHONE . '.' ] );
     }
 }
 add_action( 'wp_ajax_erawat_contact',        'erawat_handle_contact_form' );
@@ -154,35 +209,57 @@ add_action( 'wp_ajax_nopriv_erawat_contact', 'erawat_handle_contact_form' );
 /* ──────────────────────────────────────────────
    HELPER FUNCTIONS
 ────────────────────────────────────────────── */
-function erawat_get_breadcrumbs() {
-    if ( is_front_page() ) return;
-    echo '<nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container">';
-    echo '<a href="' . esc_url( home_url('/') ) . '">Home</a>';
-    if ( is_page() ) {
-        global $post;
-        if ( $post->post_parent ) {
-            $parent = get_post( $post->post_parent );
-            echo ' <span>/</span> <a href="' . esc_url( get_permalink( $parent ) ) . '">' . esc_html( $parent->post_title ) . '</a>';
-        }
-        echo ' <span>/</span> <span>' . esc_html( get_the_title() ) . '</span>';
-    }
-    echo '</div></nav>';
+
+/**
+ * URL of one of the six pages by slug, with a trailing slash.
+ */
+function erawat_url( $slug = '' ) {
+    return home_url( '/' . ( $slug ? trailingslashit( $slug ) : '' ) );
 }
 
-function erawat_page_banner( $title = '', $subtitle = '', $bg_class = '' ) {
+/**
+ * Breadcrumb trail (printed inside the page banner).
+ */
+function erawat_get_breadcrumbs( $current = '' ) {
+    if ( is_front_page() ) return;
+
+    $current = $current ?: get_the_title();
+
+    echo '<nav class="breadcrumbs" aria-label="Breadcrumb"><ol class="breadcrumbs__list">';
+    echo '<li><a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'Home', 'erawat-enterprise' ) . '</a></li>';
+    if ( is_page() ) {
+        $ancestors = array_reverse( get_post_ancestors( get_the_ID() ) );
+        foreach ( $ancestors as $ancestor_id ) {
+            echo '<li><a href="' . esc_url( get_permalink( $ancestor_id ) ) . '">' . esc_html( get_the_title( $ancestor_id ) ) . '</a></li>';
+        }
+    }
+    echo '<li aria-current="page">' . esc_html( $current ) . '</li>';
+    echo '</ol></nav>';
+}
+
+/**
+ * The round arrow that ends a button (two arrows: one slides out, the other slides in on hover).
+ */
+function erawat_btn_circle() {
+    return '<span class="btn__circle" aria-hidden="true"><i class="fas fa-arrow-right"></i><i class="fas fa-arrow-right"></i></span>';
+}
+
+/**
+ * Page banner: a rounded photo panel with the breadcrumb, eyebrow ($subtitle) and the page's single <h1> ($title).
+ */
+function erawat_page_banner( $title = '', $subtitle = '', $bg_class = 'banner--default' ) {
     $title = $title ?: get_the_title();
     ?>
     <section class="page-banner <?php echo esc_attr( $bg_class ); ?>">
-        <div class="banner-overlay"></div>
-        <div class="container">
-            <div class="banner-content">
-                <?php if ( $subtitle ) : ?>
-                    <span class="banner-eyebrow"><?php echo esc_html( $subtitle ); ?></span>
-                <?php endif; ?>
-                <h1 class="banner-title"><?php echo esc_html( $title ); ?></h1>
-            </div>
+        <div class="page-banner__bg" data-parallax="0.08" aria-hidden="true"></div>
+        <div class="page-banner__overlay" aria-hidden="true"></div>
+        <div class="container page-banner__inner">
+            <?php erawat_get_breadcrumbs( $title ); ?>
+            <?php if ( $subtitle ) : ?>
+                <span class="eyebrow eyebrow--light page-banner__eyebrow"><?php echo esc_html( $subtitle ); ?></span>
+            <?php endif; ?>
+            <h1 class="page-banner__title" data-split><?php echo esc_html( $title ); ?></h1>
         </div>
     </section>
     <?php
-    erawat_get_breadcrumbs();
 }

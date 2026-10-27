@@ -1,150 +1,125 @@
 <?php get_header(); ?>
 
-<?php erawat_page_banner('Contact Us', 'Get In Touch', 'banner--contact'); ?>
+<?php erawat_page_banner( 'Contact Us', 'Get a Quote', 'banner--contact' ); ?>
 
-<!-- ══════════════ CONTACT INFO CARDS ══════════════ -->
-<section class="section contact-info-strip">
-    <div class="container">
-        <div class="contact-info-grid" data-aos="fade-up">
-            <div class="contact-info-card">
-                <div class="contact-info-card__icon" style="background: var(--navy);">
-                    <i class="fas fa-phone-alt"></i>
-                </div>
-                <h4>Call Us</h4>
-                <p><a href="tel:+919931060355">+91 99310 60355</a></p>
-            </div>
-            <div class="contact-info-card">
-                <div class="contact-info-card__icon" style="background: var(--forest);">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <h4>Email Us</h4>
-                <p><a href="mailto:Erawat005@gmail.com">Erawat005@gmail.com</a></p>
-            </div>
-            <div class="contact-info-card">
-                <div class="contact-info-card__icon" style="background: var(--wood);">
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <h4>Visit Us</h4>
-                <p>Plot No. XX, Industrial Area,<br>Gujarat — 380001, India</p>
-                <span class="contact-info-card__note">Factory visits by appointment</span>
-            </div>
-            <div class="contact-info-card">
-                <div class="contact-info-card__icon" style="background: var(--navy-dark);">
-                    <i class="fab fa-whatsapp"></i>
-                </div>
-                <h4>WhatsApp</h4>
-                <p><a href="https://wa.me/919931060355" target="_blank" rel="noopener">+91 99310 60355</a></p>
-                <p>Send your specs &amp; get a quick quote</p>
-                <span class="contact-info-card__note">Fast response via WhatsApp</span>
-            </div>
-        </div>
-    </div>
-</section>
+<?php
+$products = erawat_products();
 
-<!-- ══════════════ CONTACT FORM + MAP ══════════════ -->
-<section class="section section--cream contact-main">
-    <div class="container">
-        <div class="contact-main__grid">
+// Pre-select the product when arriving from a product page (?product=box-pallet).
+$selected_product = isset( $_GET['product'] ) ? sanitize_key( wp_unslash( $_GET['product'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification
+?>
 
-            <!-- Contact Form -->
-            <div class="contact-form-wrap" data-aos="fade-right">
-                <div class="section-header">
-                    <span class="section-eyebrow">Send An Enquiry</span>
-                    <h2 class="section-title">Get Your Free Quote</h2>
-                    <div class="title-divider"></div>
-                    <p>Fill in your details and our packaging engineers will contact you with a tailored quote and design recommendation.</p>
-                </div>
+<section class="section section--contact" aria-labelledby="quote-title">
+    <div class="container contact-grid">
 
-                <form class="contact-form" id="main-contact-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="cf-name">Full Name <span class="required">*</span></label>
-                            <input type="text" id="cf-name" name="name" placeholder="Your full name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="cf-company">Company Name</label>
-                            <input type="text" id="cf-company" name="company" placeholder="Your company">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="cf-email">Email Address <span class="required">*</span></label>
-                            <input type="email" id="cf-email" name="email" placeholder="you@company.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="cf-phone">Phone Number</label>
-                            <input type="tel" id="cf-phone" name="phone" placeholder="+91 XXXXX XXXXX">
-                        </div>
+        <!-- Enquiry form -->
+        <div class="form-card" data-aos="fade-right">
+            <h2 id="quote-title" data-split>Get a Quote</h2>
+            <p class="form-card__intro">Tell us your panel size and quantity. We'll reply with a price and lead time.</p>
+
+            <form class="contact-form" id="main-contact-form" method="post" action="#">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cf-name">Full Name <span class="required" aria-hidden="true">*</span></label>
+                        <input type="text" id="cf-name" name="name" autocomplete="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="cf-product">Product / Service Required</label>
+                        <label for="cf-phone">Phone <span class="required" aria-hidden="true">*</span></label>
+                        <input type="tel" id="cf-phone" name="phone" autocomplete="tel" inputmode="tel" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cf-email">Email</label>
+                        <input type="email" id="cf-email" name="email" autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-company">Company</label>
+                        <input type="text" id="cf-company" name="company" autocomplete="organization">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cf-product">Product</label>
+                    <div class="select-wrap">
                         <select id="cf-product" name="product">
-                            <option value="">— Select a product/service —</option>
-                                                    <option value="warehousing-pallets">Warehousing Pallet Solutions</option>
-                        <option value="on-site-packaging">On Site Packaging Service</option>
-                        <option value="ispm-15-pallets">ISPM 15 Heat Treated Pallet</option>
-                        <option value="packaging-consultation">Wooden Packaging Consultation</option>
-                        <option value="plywood-pallets-boxes">Plywood Pallet &amp; Boxes</option>
-                        <option value="customised-packaging">Customised Packaging</option>
-                        <option value="other">Other / Multiple Products</option>
+                            <option value="">Select a product</option>
+                            <?php foreach ( $products as $slug => $product ) : ?>
+                                <option value="<?php echo esc_attr( $slug ); ?>" <?php selected( $selected_product, $slug ); ?>><?php echo esc_html( $product['name'] ); ?></option>
+                            <?php endforeach; ?>
+                            <option value="not-sure" <?php selected( $selected_product, 'not-sure' ); ?>>Not sure yet</option>
                         </select>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="cf-quantity">Approximate Quantity</label>
-                            <input type="text" id="cf-quantity" name="quantity" placeholder="e.g. 500 units/month">
-                        </div>
-                        <div class="form-group">
-                            <label for="cf-destination">Destination (if export)</label>
-                            <input type="text" id="cf-destination" name="destination" placeholder="e.g. USA, Germany">
-                        </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cf-quantity">Quantity</label>
+                        <input type="text" id="cf-quantity" name="quantity" placeholder="e.g. 200 pallets/month">
                     </div>
                     <div class="form-group">
-                        <label for="cf-message">Your Requirements <span class="required">*</span></label>
-                        <textarea id="cf-message" name="message" rows="5"
-                            placeholder="Please describe the product to be packed (dimensions, weight, fragility), intended use (domestic/export), and any special requirements..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn--primary btn--lg btn--full">
-                        <i class="fas fa-paper-plane"></i> Send Enquiry
-                    </button>
-                    <p class="form-privacy mt-3">
-                        <i class="fas fa-lock"></i>
-                        Your information is confidential and will only be used to respond to your enquiry.
-                    </p>
-                    <div class="form-message" id="contact-form-message" style="display:none;"></div>
-                </form>
-            </div>
-
-            <!-- Right Panel -->
-            <div class="contact-side" data-aos="fade-left">
-                <!-- Map Placeholder -->
-                <div class="map-container">
-                    <div class="map-placeholder">
-                        <i class="fas fa-map-marked-alt"></i>
-                        <p>Erawat Enterprise</p>
-                        <span>Industrial Area, Gujarat, India</span>
-                        <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn--outline-primary btn--sm mt-3">
-                            <i class="fas fa-external-link-alt"></i> Open in Google Maps
-                        </a>
+                        <label for="cf-location">Delivery location</label>
+                        <input type="text" id="cf-location" name="location" placeholder="e.g. Jaipur, Rajasthan">
                     </div>
                 </div>
 
-                <!-- Quick Contact Details -->
-                <div class="contact-side__details">
-                    <div class="contact-side__social mt-4">
-                        <h4>Connect With Us</h4>
-                        <div class="social-links-row">
-                            <a href="https://www.linkedin.com/in/erawat-enterprise-145601431" target="_blank" rel="noopener" class="social-link-lg" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i> LinkedIn
-                            </a>
-                            <a href="https://wa.me/919931060355" class="social-link-lg" aria-label="WhatsApp" target="_blank" rel="noopener">
-                                <i class="fab fa-whatsapp"></i> WhatsApp
-                            </a>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label for="cf-message">Requirements <span class="required" aria-hidden="true">*</span></label>
+                    <textarea id="cf-message" name="message" rows="4" placeholder="Panel size (L × W), panels per pallet, quantity and anything special…" required></textarea>
                 </div>
-            </div>
+
+                <button type="submit" class="btn btn--primary btn--lg btn--full">
+                    Send Enquiry <?php echo erawat_btn_circle(); // phpcs:ignore WordPress.Security.EscapeOutput ?>
+                </button>
+                <p class="form-privacy"><i class="fas fa-lock" aria-hidden="true"></i> We only use your details to reply to your enquiry.</p>
+                <div class="form-message" id="contact-form-message" role="status" aria-live="polite" hidden></div>
+            </form>
         </div>
+
+        <!-- Contact panel -->
+        <aside class="contact-panel" data-aos="fade-left" aria-label="Contact details">
+            <ul class="contact-list spec-list">
+                <li class="contact-list__item">
+                    <span class="contact-list__icon" aria-hidden="true"><i class="fas fa-phone-alt"></i></span>
+                    <div>
+                        <h3>Call</h3>
+                        <a href="tel:<?php echo esc_attr( ERAWAT_PHONE_TEL ); ?>"><?php echo esc_html( ERAWAT_PHONE ); ?></a>
+                    </div>
+                </li>
+                <li class="contact-list__item">
+                    <span class="contact-list__icon contact-list__icon--green" aria-hidden="true"><i class="fab fa-whatsapp"></i></span>
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <a href="<?php echo esc_url( ERAWAT_WHATSAPP ); ?>" target="_blank" rel="noopener">Chat with us</a>
+                        <p>Send your panel size and get a quick quote</p>
+                    </div>
+                </li>
+                <li class="contact-list__item">
+                    <span class="contact-list__icon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+                    <div>
+                        <h3>Email</h3>
+                        <a href="mailto:<?php echo esc_attr( ERAWAT_EMAIL ); ?>"><?php echo esc_html( ERAWAT_EMAIL ); ?></a>
+                    </div>
+                </li>
+                <li class="contact-list__item">
+                    <span class="contact-list__icon contact-list__icon--wood" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></span>
+                    <div>
+                        <h3>Location</h3>
+                        <p class="contact-list__value">Gujarat, India</p>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="contact-panel__deliver">
+                <h3>We deliver to</h3>
+                <ul class="chip-list chip-list--sm">
+                    <li class="chip"><i class="fas fa-location-dot" aria-hidden="true"></i> Gujarat</li>
+                    <li class="chip"><i class="fas fa-location-dot" aria-hidden="true"></i> Rajasthan</li>
+                    <li class="chip"><i class="fas fa-location-dot" aria-hidden="true"></i> Jaipur</li>
+                </ul>
+            </div>
+        </aside>
     </div>
 </section>
 

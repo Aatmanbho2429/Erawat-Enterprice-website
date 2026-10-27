@@ -1,452 +1,149 @@
 <?php get_header(); ?>
+<?php
+$products = erawat_products();
+
+$marquee_items = [
+    'Solar Pallets', 'Box Pallets', 'Custom Sizes', 'ISPM 15 Heat Treated',
+    'Bulk Supply', 'Gujarat', 'Rajasthan', 'Jaipur',
+];
+
+$reasons = [
+    [ 'icon' => 'fa-ruler-combined', 'title' => 'Made to your size',    'text' => 'Every pallet is cut to your panel dimensions. No loose fit, no wasted space.' ],
+    [ 'icon' => 'fa-tree',           'title' => 'Strong, seasoned wood', 'text' => 'Firm construction that takes forklift handling and long truck journeys.' ],
+    [ 'icon' => 'fa-globe',          'title' => 'Export ready',          'text' => 'ISPM 15 heat treatment and IPPC marking for export orders.' ],
+    [ 'icon' => 'fa-boxes-stacked',  'title' => 'Bulk supply',           'text' => 'Steady production for repeat orders, delivered across Gujarat and Rajasthan.' ],
+];
+?>
 
 <!-- ══════════════ HERO ══════════════ -->
-<section class="hero" id="home-hero">
-    <div class="hero__bg"></div>
-    <div class="hero__overlay"></div>
-    <div class="container hero__inner">
-        <div class="hero__content" data-aos="fade-up">
-            <span class="hero__eyebrow">
-                <i class="fas fa-certificate"></i>ISPM 15 Certified Manufacturer
-            </span>
-            <h1 class="hero__title">
-                Engineered Wooden Packaging<br>
-                <span class="text-accent-green">Built for Solar.</span>
-                Built to Last.
+<section class="hero" aria-labelledby="hero-title">
+    <div class="hero__bg" data-parallax="0.08" aria-hidden="true"></div>
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+        <div class="hero__main">
+            <span class="eyebrow eyebrow--light">Solar Pallet &amp; Box Pallet Manufacturer</span>
+
+            <h1 class="hero__title" id="hero-title" data-split>
+                Solar Pallets &amp; Box Pallets<span class="sr-only"> — </span>
+                <span class="hero__accent accent">Built Around Your Panels</span>
             </h1>
-            <p class="hero__subtitle">
-                Erawat Enterprise delivers precision-crafted wooden boxes, crates, and pallets
-                for solar panel manufacturers, EPC contractors, and industrial exporters across India.
-                Custom-built. ISPM 15 certified. On time — every time.
-            </p>
-            <div class="hero__actions">
-                <a href="<?php echo esc_url(home_url('/contact-us')); ?>" class="btn btn--primary btn--lg">
-                    <i class="fas fa-clipboard-list"></i> Request a Free Quote
-                </a>
-                <a href="<?php echo esc_url(home_url('/product-range')); ?>" class="btn btn--outline-white btn--lg">
-                    <i class="fas fa-boxes"></i> Explore Products
-                </a>
-            </div>
         </div>
-    </div>
-    <!-- Scroll indicator -->
-    <div class="hero__scroll">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</section>
 
-<!-- ══════════════ STATS BAR ══════════════ -->
-<section class="stats-bar">
-    <div class="container">
-        <div class="stats-bar__grid">
-            <div class="stat-item">
-                <span class="stat-item__number" data-target="18">0</span>
-                <span class="stat-item__plus">+</span>
-                <span class="stat-item__label">Years of Excellence</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-item__number" data-target="500">0</span>
-                <span class="stat-item__plus">+</span>
-                <span class="stat-item__label">Satisfied Clients</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-item__number" data-target="10000">0</span>
-                <span class="stat-item__plus">+</span>
-                <span class="stat-item__label">Projects Delivered</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-item__number" data-target="100">0</span>
-                <span class="stat-item__suffix">%</span>
-                <span class="stat-item__label">ISPM 15 Compliant</span>
-            </div>
-        </div>
-    </div>
-</section>
+        <div class="hero__bottom">
+            <div class="hero__content">
+                <p class="hero__text">Strong wooden pallets and box pallets, made to the exact size of your solar modules — for manufacturers and EPC companies in Gujarat, Rajasthan and Jaipur.</p>
 
-<!-- ══════════════ ABOUT SNIPPET ══════════════ -->
-<section class="section about-snippet">
-    <div class="container">
-        <div class="about-snippet__grid">
-            <div class="about-snippet__visual" data-aos="fade-right">
-                <div class="about-visual-card">
-                    <div class="about-visual-card__img about-visual-card__img--wood"></div>
-                    <div class="about-badge">
-                        <i class="fas fa-trophy"></i>
-                        <strong>Trusted Since 2005</strong>
-                    </div>
-                </div>
-                <div class="about-visual-stats">
-                    <div class="mini-stat">
-                        <i class="fas fa-solar-panel"></i>
-                        <span>Solar Sector Specialist</span>
-                    </div>
-                    <div class="mini-stat">
-                        <i class="fas fa-globe-asia"></i>
-                        <span>Pan-India Supply</span>
-                    </div>
-                </div>
-            </div>
-            <div class="about-snippet__content" data-aos="fade-left">
-                <span class="section-eyebrow">Who We Are</span>
-                <h2 class="section-title">Gujarat's Leading Wooden Packaging Manufacturer</h2>
-                <div class="title-divider"></div>
-                <p class="section-desc">
-                    Erawat Enterprise is a Gujarat-based wooden packaging manufacturer with over 18 years of
-                    experience delivering robust, custom-engineered wooden boxes, crates, and pallets. We specialise
-                    in the solar energy sector — our packaging protects solar panels, inverters, and balance-of-system
-                    components throughout their journey from manufacturer to installation site.
-                </p>
-                <p class="section-desc">
-                    Every product we craft meets the stringent requirements of ISPM 15, ensuring your goods pass
-                    international phytosanitary checks without delay. Our in-house heat-treatment facilities,
-                    precision woodworking machinery, and quality assurance protocols make us the packaging partner
-                    of choice for India's leading solar manufacturers.
-                </p>
-                <ul class="check-list">
-                    <li><i class="fas fa-check-circle"></i> ISPM 15 Certified Heat Treatment</li>
-                    <li><i class="fas fa-check-circle"></i> Custom Sizing &amp; Engineering Design</li>
-                    <li><i class="fas fa-check-circle"></i> High-Volume Bulk Supply Capability</li>
-                    <li><i class="fas fa-check-circle"></i> On-Time Delivery — SLA Guaranteed</li>
-                </ul>
-                <a href="<?php echo esc_url(home_url('/about-us')); ?>" class="btn btn--primary btn--md mt-4">
-                    Discover Our Story <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ══════════════ WHY CHOOSE US ══════════════ -->
-<section class="section section--cream why-choose">
-    <div class="container">
-        <div class="section-header text-center" data-aos="fade-up">
-            <span class="section-eyebrow">Our Competitive Edge</span>
-            <h2 class="section-title">Why Industry Leaders Choose Erawat Enterprise</h2>
-            <div class="title-divider center"></div>
-            <p class="section-subtitle">Six pillars that set us apart from every competitor in the market.</p>
-        </div>
-        <div class="why-grid" data-aos="fade-up" data-aos-delay="100">
-            <div class="why-card">
-                <div class="why-card__icon why-card__icon--blue">
-                    <i class="fas fa-ruler-combined"></i>
-                </div>
-                <h3>Precision Engineering</h3>
-                <p>Every box is engineered to exact tolerances using CNC woodworking machinery. Zero compromise on fit, strength, or finish.</p>
-            </div>
-            <div class="why-card">
-                <div class="why-card__icon why-card__icon--green">
-                    <i class="fas fa-certificate"></i>
-                </div>
-                <h3>ISPM 15 Certified</h3>
-                <p>Our in-house heat-treatment facility is fully NPPO-registered, ensuring your export shipments clear customs without delay worldwide.</p>
-            </div>
-            <div class="why-card">
-                <div class="why-card__icon why-card__icon--brown">
-                    <i class="fas fa-solar-panel"></i>
-                </div>
-                <h3>Solar Sector Expertise</h3>
-                <p>Over 18 years packing solar modules, inverters, and mounting structures. We understand fragile-load dynamics better than anyone.</p>
-            </div>
-            <div class="why-card">
-                <div class="why-card__icon why-card__icon--blue">
-                    <i class="fas fa-boxes"></i>
-                </div>
-                <h3>High-Volume Capacity</h3>
-                <p>Our large manufacturing facility handles bulk orders with consistent quality across every unit — from 10 boxes to 10,000.</p>
-            </div>
-            <div class="why-card">
-                <div class="why-card__icon why-card__icon--green">
-                    <i class="fas fa-leaf"></i>
-                </div>
-                <h3>Eco-Responsible Wood</h3>
-                <p>We source seasoned, sustainable timber and minimise waste through efficient cut planning and by-product recycling.</p>
-            </div>
-            <div class="why-card">
-                <div class="why-card__icon why-card__icon--brown">
-                    <i class="fas fa-shipping-fast"></i>
-                </div>
-                <h3>On-Time Delivery</h3>
-                <p>Our production scheduling and logistics network ensure your packaging arrives on time, every time — no excuses.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ══════════════ PRODUCT RANGE ══════════════ -->
-<section class="section products-showcase">
-    <div class="container">
-        <div class="section-header text-center" data-aos="fade-up">
-            <span class="section-eyebrow">What We Make</span>
-            <h2 class="section-title">Our Product Range</h2>
-            <div class="title-divider center"></div>
-            <p class="section-subtitle">Custom-engineered wooden packaging solutions for every industrial need.</p>
-        </div>
-        <div class="products-grid" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="product-card product-card--featured">
-                <div class="product-card__img product-card__img--solar"></div>
-                <div class="product-card__body">
-                    <span class="product-card__tag">Bestseller</span>
-                    <h3>Solar Renewable Energy Pallet</h3>
-                    <p>Heavy-duty close-boarded pallets sized for solar modules and inverters. Wide deck boards spread point loads across the panel face, and every pallet is ISPM 15 heat-treated and IPPC stamped for export.</p>
-                    <a href="<?php echo esc_url(home_url('/product-range')); ?>" class="product-card__link">
-                        View Details <i class="fas fa-arrow-right"></i>
+                <div class="hero__actions">
+                    <a href="<?php echo esc_url( erawat_url( 'contact-us' ) ); ?>" class="btn btn--white btn--lg" data-magnetic>
+                        Get a Quote <?php echo erawat_btn_circle(); // phpcs:ignore WordPress.Security.EscapeOutput ?>
+                    </a>
+                    <a href="<?php echo esc_url( erawat_url( 'product-range' ) ); ?>" class="btn btn--outline-white btn--lg">
+                        View Products
                     </a>
                 </div>
             </div>
 
-            <div class="product-card">
-                <div class="product-card__img product-card__img--pallets"></div>
-                <div class="product-card__body">
-                    <h3>Export &amp; Warehousing Pallets</h3>
-                    <p>Four-way entry pallets in Euro, standard and made-to-measure sizes. Kiln-dried and heat-treated for racking, block stacking and international despatch, with load ratings to match your cargo.</p>
-                    <a href="<?php echo esc_url(home_url('/product-range')); ?>" class="product-card__link">
-                        View Details <i class="fas fa-arrow-right"></i>
+            <div class="hero__visual">
+                <?php
+                foreach ( [ 'solar-pallet' => 8, 'box-pallet' => 5 ] as $key => $depth ) :
+                    $product = $products[ $key ];
+                    $image   = erawat_product_image( $product );
+                    ?>
+                    <a class="hero__card" href="<?php echo esc_url( erawat_url( 'product-range' ) . '#' . $key ); ?>" data-depth="<?php echo (int) $depth; ?>">
+                        <span class="hero__card-anim">
+                            <span class="hero__card-thumb photo-frame">
+                                <img
+                                    src="<?php echo esc_url( $image['url'] ); ?>"
+                                    alt="<?php echo esc_attr( $product['alt'] ); ?>"
+                                    width="<?php echo esc_attr( $image['width'] ); ?>"
+                                    height="<?php echo esc_attr( $image['height'] ); ?>"
+                                    loading="eager" decoding="async">
+                            </span>
+                            <span class="hero__card-row">
+                                <span class="hero__card-name"><?php echo esc_html( $product['name'] ); ?></span>
+                                <span class="hero__card-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+                            </span>
+                        </span>
                     </a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-card__img product-card__img--crates"></div>
-                <div class="product-card__body">
-                    <h3>Wooden Boxes &amp; Wooden Crates</h3>
-                    <p>Open-slatted crates for ventilated, long or oversized loads, and fully enclosed cases for machinery and high-value equipment. Diagonally braced, battened and cleated to survive rough handling.</p>
-                    <a href="<?php echo esc_url(home_url('/product-range')); ?>" class="product-card__link">
-                        View Details <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-card__img product-card__img--custom"></div>
-                <div class="product-card__body">
-                    <h3>Multi Purpose Logistics Packaging</h3>
-                    <p>Plywood-panelled cases, skid bases and bespoke crating for awkward, heavy or irregular cargo. Engineered around your product's dimensions, weight distribution and transit route.</p>
-                    <a href="<?php echo esc_url(home_url('/product-range')); ?>" class="product-card__link">
-                        View Details <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="product-card product-card--cta">
-                <div class="product-card__cta-inner">
-                    <i class="fas fa-hard-hat"></i>
-                    <h3>Need Something Specific?</h3>
-                    <p>We design and manufacture packaging for any industry, any product, any size.</p>
-                    <a href="<?php echo esc_url(home_url('/contact-us')); ?>" class="btn btn--primary btn--md">
-                        Discuss Your Requirement
-                    </a>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
 
-        <div class="text-center mt-5">
-            <a href="<?php echo esc_url(home_url('/product-range')); ?>" class="btn btn--outline-primary btn--lg">
-                View Full Product Range <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
+        <ul class="hero__chips">
+            <li><i class="fas fa-ruler-combined" aria-hidden="true"></i> Made to Your Size</li>
+            <li><i class="fas fa-temperature-high" aria-hidden="true"></i> ISPM 15 Heat Treatment</li>
+            <li><i class="fas fa-truck-ramp-box" aria-hidden="true"></i> Bulk Orders, On Time</li>
+        </ul>
     </div>
 </section>
 
-<!-- ══════════════ ISPM 15 CALLOUT ══════════════ -->
-<section class="ispm-callout">
-    <div class="ispm-callout__overlay"></div>
+<!-- ══════════════ MARQUEE ══════════════ -->
+<section class="marquee" aria-label="Products and areas we serve">
+    <div class="marquee__track">
+        <?php for ( $loop = 0; $loop < 4; $loop++ ) : ?>
+            <ul class="marquee__list"<?php echo $loop > 0 ? ' aria-hidden="true"' : ''; ?>>
+                <?php foreach ( $marquee_items as $item ) : ?>
+                    <li><?php echo esc_html( $item ); ?></li>
+                <?php endforeach; ?>
+            </ul>
+        <?php endfor; ?>
+    </div>
+</section>
+
+<!-- ══════════════ WHAT WE MAKE ══════════════ -->
+<section class="section section--panel" aria-labelledby="make-title">
     <div class="container">
-        <div class="ispm-callout__inner" data-aos="fade-up">
-            <div class="ispm-callout__icon">
-                <i class="fas fa-shield-alt"></i>
+        <div class="make-head">
+            <div class="section-head">
+                <span class="eyebrow" data-aos="fade-up">What We Make</span>
+                <h2 id="make-title" data-split>Solar Pallets, Box Pallets &amp; Custom Builds</h2>
             </div>
-            <div class="ispm-callout__content">
-                <span class="eyebrow-light">International Standard</span>
-                <h2>What is ISPM 15 and Why Does it Matter?</h2>
-                <p>
-                    ISPM 15 (International Standards for Phytosanitary Measures No. 15) regulates wooden packaging
-                    material used in international trade. All wooden pallets, crates, and dunnage must be treated
-                    (heat treatment or methyl bromide fumigation) and marked with the official IPPC mark —
-                    or they will be rejected at customs borders worldwide.
-                </p>
-                <p>
-                    Erawat Enterprise's in-house heat-treatment kilns are NPPO-registered and certified to produce
-                    ISPM 15-compliant packaging for all export shipments.
-                </p>
-                <a href="<?php echo esc_url(home_url('/ispm-15-packing')); ?>" class="btn btn--white btn--md">
-                    Learn More About ISPM 15 <i class="fas fa-arrow-right"></i>
-                </a>
+            <p class="statement" data-scroll-fill>Four products, one job — getting your solar panels to site without damage.</p>
+        </div>
+
+        <div class="product-grid" data-aos-stagger>
+            <?php
+            $n = 0;
+            foreach ( $products as $slug => $product ) {
+                get_template_part( 'template-parts/product-card', null, [
+                    'product' => $product,
+                    'index'   => ++$n,
+                ] );
+            }
+            ?>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════ WHY ERAWAT + HOW IT WORKS ══════════════ -->
+<section class="section section--dark" aria-labelledby="why-title">
+    <div class="container">
+        <div class="section-head">
+            <span class="eyebrow" data-aos="fade-up">Why Erawat</span>
+            <h2 id="why-title" data-split>Built Strong. Sized Right. <span class="accent">Delivered on Time.</span></h2>
+        </div>
+
+        <div class="why-grid">
+            <div class="reasons" data-aos-stagger>
+                <?php foreach ( $reasons as $reason ) : ?>
+                    <article class="reason" data-aos="fade-up">
+                        <span class="reason__icon" aria-hidden="true"><i class="fas <?php echo esc_attr( $reason['icon'] ); ?>"></i></span>
+                        <h3 class="reason__title"><?php echo esc_html( $reason['title'] ); ?></h3>
+                        <p><?php echo esc_html( $reason['text'] ); ?></p>
+                    </article>
+                <?php endforeach; ?>
             </div>
-            <div class="ispm-callout__marks">
-                <div class="ispm-mark">
-                    <i class="fas fa-fire"></i>
-                    <span>Heat Treatment (HT)</span>
-                </div>
-                <div class="ispm-mark">
-                    <i class="fas fa-check-double"></i>
-                    <span>NPPO Registered</span>
-                </div>
-                <div class="ispm-mark">
-                    <i class="fas fa-globe"></i>
-                    <span>180+ Countries Accepted</span>
-                </div>
+
+            <div class="how-card">
+                <h3 class="how-card__title">How It Works</h3>
+                <?php get_template_part( 'template-parts/process-steps', null, [ 'layout' => 'vertical' ] ); ?>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ══════════════ SERVICES OVERVIEW ══════════════ -->
-<section class="section services-overview">
-    <div class="container">
-        <div class="section-header text-center" data-aos="fade-up">
-            <span class="section-eyebrow">What We Do</span>
-            <h2 class="section-title">Comprehensive Packaging Services</h2>
-            <div class="title-divider center"></div>
-        </div>
-        <div class="services-overview__grid" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item">
-                <div class="service-item__num">01</div>
-                <i class="fas fa-tools service-item__icon"></i>
-                <h3>Custom Manufacturing</h3>
-                <p>Design-to-delivery manufacturing for all wooden packaging needs. CAD design, material selection, precision cutting, and assembly.</p>
-            </div>
-            <div class="service-item">
-                <div class="service-item__num">02</div>
-                <i class="fas fa-fire service-item__icon"></i>
-                <h3>ISPM 15 Heat Treatment</h3>
-                <p>NPPO-certified heat treatment of all wooden packaging for international export compliance — documentation provided.</p>
-            </div>
-            <div class="service-item">
-                <div class="service-item__num">03</div>
-                <i class="fas fa-drafting-compass service-item__icon"></i>
-                <h3>Packaging Design & Engineering</h3>
-                <p>In-house structural engineering to design packaging that perfectly fits and protects your most fragile products.</p>
-            </div>
-            <div class="service-item">
-                <div class="service-item__num">04</div>
-                <i class="fas fa-truck service-item__icon"></i>
-                <h3>Bulk Supply & Logistics</h3>
-                <p>High-volume production capability with pan-India supply chain. Regular scheduled deliveries or just-in-time supply.</p>
-            </div>
-        </div>
-        <div class="text-center mt-5">
-            <a href="<?php echo esc_url(home_url('/services')); ?>" class="btn btn--primary btn--lg">
-                View All Services <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- ══════════════ TESTIMONIALS ══════════════ -->
-<section class="section section--cream testimonials">
-    <div class="container">
-        <div class="section-header text-center" data-aos="fade-up">
-            <span class="section-eyebrow">Client Testimonials</span>
-            <h2 class="section-title">What Our Clients Say</h2>
-            <div class="title-divider center"></div>
-        </div>
-        <div class="testimonials__grid" data-aos="fade-up" data-aos-delay="100">
-            <div class="testimonial-card">
-                <div class="testimonial-card__stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <blockquote>
-                    "Erawat Enterprise has been our packaging partner for over five years. Their solar panel wooden
-                    boxes are precisely engineered and have dramatically reduced transit damage. ISPM 15 compliance
-                    means our exports are always hassle-free."
-                </blockquote>
-                <div class="testimonial-card__author">
-                    <div class="author-avatar">RK</div>
-                    <div>
-                        <strong>Rajesh Kumar</strong>
-                        <span>Procurement Manager, SolarTech India Ltd.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-card__stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <blockquote>
-                    "The quality and consistency from Erawat is outstanding. We place bulk orders regularly and
-                    delivery is always on time. Their team understands the urgency of the solar sector supply chain
-                    and never lets us down."
-                </blockquote>
-                <div class="testimonial-card__author">
-                    <div class="author-avatar">PM</div>
-                    <div>
-                        <strong>Priya Mehta</strong>
-                        <span>Operations Head, GreenEnergy EPC Pvt. Ltd.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-card__stars">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <blockquote>
-                    "Custom wooden crates for our industrial equipment — delivered on spec, on time, every single
-                    batch. Erawat's engineering team took the time to understand our fragile load requirements.
-                    Zero damage claims since we switched to them."
-                </blockquote>
-                <div class="testimonial-card__author">
-                    <div class="author-avatar">AS</div>
-                    <div>
-                        <strong>Anand Shah</strong>
-                        <span>Logistics Director, Apex Industrial Exports</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ══════════════ PROCESS STRIP ══════════════ -->
-<section class="section section--navy process-strip">
-    <div class="container">
-        <div class="section-header text-center" data-aos="fade-up">
-            <span class="eyebrow-light">How It Works</span>
-            <h2 class="section-title text-white">From Your Requirement to Your Doorstep</h2>
-            <div class="title-divider center"></div>
-        </div>
-        <div class="process-steps" data-aos="fade-up" data-aos-delay="100">
-            <div class="process-step">
-                <div class="process-step__num">1</div>
-                <i class="fas fa-comments"></i>
-                <h3>Enquiry & Brief</h3>
-                <p>Share your product dimensions, quantity, and shipping destination with our team.</p>
-            </div>
-            <div class="process-arrow"><i class="fas fa-chevron-right"></i></div>
-            <div class="process-step">
-                <div class="process-step__num">2</div>
-                <i class="fas fa-drafting-compass"></i>
-                <h3>Design & Quote</h3>
-                <p>Our engineers design the optimal packaging solution and deliver a detailed quote within 24 hours.</p>
-            </div>
-            <div class="process-arrow"><i class="fas fa-chevron-right"></i></div>
-            <div class="process-step">
-                <div class="process-step__num">3</div>
-                <i class="fas fa-hammer"></i>
-                <h3>Manufacturing</h3>
-                <p>Precision woodworking with quality checks at every stage — from timber selection to final assembly.</p>
-            </div>
-            <div class="process-arrow"><i class="fas fa-chevron-right"></i></div>
-            <div class="process-step">
-                <div class="process-step__num">4</div>
-                <i class="fas fa-fire"></i>
-                <h3>ISPM 15 Treatment</h3>
-                <p>Heat treatment in our NPPO-registered kilns, with official marks and documentation included.</p>
-            </div>
-            <div class="process-arrow"><i class="fas fa-chevron-right"></i></div>
-            <div class="process-step">
-                <div class="process-step__num">5</div>
-                <i class="fas fa-truck"></i>
-                <h3>Delivery</h3>
-                <p>Packed, labelled, and delivered to your facility on schedule — pan-India coverage.</p>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- ══════════════ CUSTOMER REVIEWS ══════════════ -->
+<?php get_template_part( 'template-parts/reviews' ); ?>
 
 <?php get_footer(); ?>
