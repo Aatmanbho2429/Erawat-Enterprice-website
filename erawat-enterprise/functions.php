@@ -30,6 +30,9 @@ require_once ERAWAT_DIR . '/inc/products.php';
 require_once ERAWAT_DIR . '/inc/seo.php';
 require_once ERAWAT_DIR . '/inc/reviews.php';
 
+/* Contact-form enquiries, saved in wp-admin → Enquiries */
+require_once ERAWAT_DIR . '/inc/enquiries.php';
+
 /* ──────────────────────────────────────────────
    THEME SETUP
 ────────────────────────────────────────────── */
@@ -185,6 +188,17 @@ function erawat_handle_contact_form() {
         $product_name = 'Not sure yet';
     }
 
+    // Save it first (wp-admin → Enquiries), so the enquiry is kept even if the email fails.
+    $saved_id = erawat_save_enquiry( [
+        'name'     => $name,
+        'phone'    => $phone,
+        'email'    => $email,
+        'company'  => $company,
+        'product'  => $product_name,
+        'quantity' => $quantity,
+        'location' => $location,
+    ], $message );
+
     $to      = get_option( 'admin_email' );
     $subject = "New enquiry from {$name} — {$product_name}";
     $body    = "Name: {$name}\n"
@@ -195,6 +209,9 @@ function erawat_handle_contact_form() {
              . 'Quantity: ' . ( $quantity ? $quantity : '—' ) . "\n"
              . 'Delivery location: ' . ( $location ? $location : '—' ) . "\n\n"
              . "Requirements:\n{$message}";
+    if ( $saved_id ) {
+        $body .= "\n\nSaved in WordPress: " . admin_url( 'post.php?post=' . $saved_id . '&action=edit' );
+    }
 
     $headers = [];
     if ( $email && is_email( $email ) ) {
@@ -202,8 +219,10 @@ function erawat_handle_contact_form() {
     }
 
     $sent = wp_mail( $to, $subject, $body, $headers );
+    erawat_set_enquiry_mail_status( $saved_id, $sent );
 
-    if ( $sent ) {
+    // A saved enquiry counts as received even if the email failed — it is waiting in wp-admin.
+    if ( $sent || $saved_id ) {
         wp_send_json_success( [ 'message' => 'Thank you! We have received your enquiry and will reply shortly.' ] );
     } else {
         wp_send_json_error( [ 'message' => 'Could not send your enquiry. Please call or WhatsApp us on ' . ERAWAT_PHONE . '.' ] );
