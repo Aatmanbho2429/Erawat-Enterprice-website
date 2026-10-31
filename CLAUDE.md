@@ -93,6 +93,11 @@ No build system: no `package.json`, no bundler, no tests, no linter. Plain PHP, 
   `location`, `message`. **Required: name, phone, message.** Email is optional but must be valid if given
   (Reply-To is only added then). `?product=slug` on the contact page pre-selects the product. The
   `<select>` sits in a `.select-wrap` (CSS chevron).
+- `inc/enquiries.php` — every submission is saved **before** the email is sent, as a private
+  `erawat_enquiry` post (wp-admin → **Enquiries**; Editors/Admins only, no "Add New", no front-end URL,
+  not in REST or sitemaps). Fields are post meta `_erawat_{name|phone|email|company|product|quantity|location}`,
+  the message is `post_content`, and `_erawat_mail` records `sent` / `failed`. The email links to the saved
+  enquiry. The form reports success if the enquiry was saved **or** emailed, so a mail outage loses nothing.
 - Nav menus register as `primary` and `footer`. If no menu is assigned, `erawat_fallback_menu()` and
   `erawat_fallback_mobile_menu()` (both defined at the bottom of `header.php`) render a hardcoded list
   (Home, About Us, Products, Services, ISPM 15, Contact). Both menus work with the pill-nav indicator.
@@ -227,8 +232,10 @@ client-supplied details — confirm with the client before relying on them.
 - First activation of the theme on the live site runs `after_switch_theme` and creates the six pages.
   After that: create a menu under Appearance → Menus and assign it to **Primary Navigation**; confirm
   Settings → Reading shows Home as the static front page.
-- `wp_mail()` needs SMTP configured on Hostinger — without it the contact form reports success paths
-  but no mail arrives. The recipient is Settings → General → Administration Email Address.
+- `wp_mail()` goes out through the **WP Mail SMTP** plugin using **Hostinger Email** (Mailer "Other SMTP",
+  `smtp.hostinger.com`, SSL 465, a mailbox on erawatenterprise.com; Resend was dropped on 2026-10-31). The
+  domain's MX/SPF/DKIM/DMARC are already Hostinger's. If mail fails, enquiries still land in wp-admin →
+  Enquiries (marked "Not sent"). The recipient is Settings → General → Administration Email Address.
 - Never commit `.DS_Store`; the deploy workflow also excludes it.
 
 # Repository etiquette
