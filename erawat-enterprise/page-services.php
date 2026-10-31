@@ -37,7 +37,7 @@ $services = [
         'alt'     => 'Solar module pallets delivered to a solar power plant site',
         'icon'    => 'fa-truck-fast',
         'title'   => 'Delivery',
-        'text'    => 'Dispatch to your factory, warehouse or project site across Gujarat and Rajasthan, including Jaipur.',
+        'text'    => 'Dispatch to your factory, warehouse or project site anywhere in India or worldwide, including Gujarat, Rajasthan and Jaipur.',
         'bullets' => [ 'Factory & site delivery', 'Full truck loads', 'Planned to your schedule' ],
     ],
 ];

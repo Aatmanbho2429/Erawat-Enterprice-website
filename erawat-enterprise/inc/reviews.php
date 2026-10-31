@@ -46,37 +46,21 @@ function erawat_reviews() {
             'text'     => 'We import Indian modules for projects across the UAE. The box pallets reached Jebel Ali in perfect condition, properly marked, and went through customs without a single query.',
         ],
         [
-            'name'     => 'Neha Sharma',
-            'role'     => 'Project Manager',
-            'company'  => 'Solar EPC company',
+            'name'     => 'Parmod Sharma',
+            'role'     => 'Production Head',
+            'company'  => 'Grew Solar',
             'location' => 'Jaipur, Rajasthan',
             'rating'   => 5,
             'text'     => 'Our sites in western Rajasthan have rough approach roads. The box pallets kept every panel safe over the last stretch of kachcha road, and the hinged lids made unloading quick for the site crew.',
         ],
         [
-            'name'     => 'Thomas Becker',
-            'role'     => 'Supply Chain Lead',
-            'company'  => 'PV module distributor',
-            'location' => 'Hamburg, Germany',
-            'rating'   => 5,
-            'text'     => 'Consistent quality in every container. The pallets are sized for our warehouse racking, the paperwork is always complete, and replies come quickly and clearly.',
-        ],
-        [
-            'name'     => 'Vikram Singh Rathore',
-            'role'     => 'Logistics Head',
-            'company'  => 'Solar park developer',
+            'name'     => 'Savan Thanki',
+            'role'     => 'Supply Chain Management',
+            'company'  => 'Grew Solar',
             'location' => 'Jodhpur, Rajasthan',
             'rating'   => 4,
             'text'     => 'Dependable supply for a large solar park — pallets were ready on the dates we had planned our dispatches around. One batch needed a size change and they turned it around in two days.',
-        ],
-        [
-            'name'     => 'Grace Wanjiku',
-            'role'     => 'Project Engineer',
-            'company'  => 'Solar installer',
-            'location' => 'Nairobi, Kenya',
-            'rating'   => 5,
-            'text'     => 'We ordered customised box pallets for a mixed load of panels and inverters. Everything arrived intact after a long sea and road journey. Good value and a helpful team.',
-        ],
+        ]
     ];
 }
 

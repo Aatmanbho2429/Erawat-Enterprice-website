@@ -20,8 +20,8 @@ locations used for SEO only — no visible sections built around them.
 | Phone / WhatsApp | +91 99310 60355 (wa.me/919931060355) ⚠️ confirm |
 | Email | Erawat005@gmail.com ⚠️ confirm |
 | LinkedIn | https://www.linkedin.com/in/erawat-enterprise-145601431 ⚠️ confirm |
-| Location | Gujarat, India (no street address, no map — client's choice) |
-| Areas served | Gujarat · Rajasthan · Jaipur ✅ confirmed by client |
+| Location | Khara No. 288/2, Bawdi, Sarna Doongar, Jhotwara, Jaipur, Rajasthan 302012, India (from the client's business card; no map — client's choice) |
+| Areas served | All of India and worldwide ✅ confirmed by client (2026-10-31). Gujarat · Rajasthan · Jaipur are named for SEO — always "across India and worldwide, including …", never as a limit |
 | Hours | Not shown — removed at client's request |
 
 Removed from the old site because they were invented filler: "18+ years", "500+ clients", "10,000+ projects",
@@ -48,12 +48,12 @@ Removed from the old site because they were invented filler: "18+ years", "500+ 
 
 - Logo (white)
 - **About line:** Erawat Enterprise makes solar pallets, box pallets and custom wooden pallets for solar
-  module makers and EPC companies across Gujarat and Rajasthan.
+  module makers and EPC companies across India and worldwide, including Gujarat and Rajasthan.
 - **Badges:** Made to Size · ISPM 15 Heat Treatment ⚠️ · Bulk Orders
 - **Products:** Solar Pallet · Box Pallet · Customised Solar Pallet · Customised Box Pallet
 - **Company:** About Us · Services · ISPM 15 Packing · Contact Us
-- **Contact:** phone, WhatsApp, email, Gujarat, India
-- **Areas line (SEO):** Solar pallet & box pallet supplier in Gujarat · Rajasthan · Jaipur
+- **Contact:** phone, WhatsApp, email, address (Khara No. 288/2, Bawdi, Sarna Doongar, Jhotwara, / Jaipur, Rajasthan 302012, India)
+- **Areas line (SEO):** Solar pallet & box pallet supplier across India and worldwide, including Gujarat · Rajasthan · Jaipur
 - **Bottom:** © {current year} Erawat Enterprise. All rights reserved.
 
 ---
@@ -62,19 +62,19 @@ Removed from the old site because they were invented filler: "18+ years", "500+ 
 
 **SEO title:** Solar Pallets & Box Pallets in Gujarat, Rajasthan & Jaipur | Erawat Enterprise
 **Meta description:** Erawat Enterprise makes solar pallets, box pallets and custom wooden pallets for solar
-panel makers in Gujarat, Rajasthan and Jaipur. Get a fast quote.
+panel makers across India and worldwide, including Gujarat, Rajasthan and Jaipur. Get a fast quote.
 
 ### Hero
 - **Eyebrow:** Solar Pallet & Box Pallet Manufacturer
 - **H1:** Solar Pallets & Box Pallets — *Built Around Your Panels*
 - **Text:** Strong wooden pallets and box pallets, made to the exact size of your solar modules — for
-  manufacturers and EPC companies in Gujarat, Rajasthan and Jaipur.
+  manufacturers and EPC companies across India and worldwide, including Gujarat, Rajasthan and Jaipur.
 - **Buttons:** Get a Quote · View Products
 - **Chips:** Made to Your Size · ISPM 15 Heat Treatment ⚠️ · Bulk Orders, On Time
 - **Visual:** two floating photo cards — "Solar Pallet" and "Box Pallet"
 
 ### Moving strip (marquee)
-Solar Pallets ✦ Box Pallets ✦ Custom Sizes ✦ ISPM 15 Heat Treated ✦ Bulk Supply ✦ Gujarat ✦ Rajasthan ✦ Jaipur
+Solar Pallets ✦ Box Pallets ✦ Custom Sizes ✦ ISPM 15 Heat Treated ✦ Bulk Supply ✦ All-India Delivery ✦ Worldwide Delivery ✦ Gujarat ✦ Rajasthan ✦ Jaipur
 
 ### What We Make
 - **Eyebrow:** What We Make
@@ -97,13 +97,13 @@ Left — four reasons:
 1. **Made to your size** — Every pallet is cut to your panel dimensions. No loose fit, no wasted space.
 2. **Strong, seasoned wood** — Firm construction that takes forklift handling and long truck journeys. ⚠️ "seasoned"
 3. **Export ready** — ISPM 15 heat treatment and IPPC marking for export orders. ⚠️
-4. **Bulk supply** — Steady production for repeat orders, delivered across Gujarat and Rajasthan.
+4. **Bulk supply** — Steady production for repeat orders, delivered anywhere in India or worldwide.
 
 Right — How it works, 4 steps:
 1. **Share your size** — Panel dimensions, panels per pallet and quantity.
 2. **Get a quote** — We confirm the design and price. Sample pallet on request. ⚠️ samples
 3. **We build** — Cut, assembled and checked — heat-treated if you export.
-4. **We deliver** — To your factory or project site across Gujarat and Rajasthan.
+4. **We deliver** — To your factory or project site, anywhere in India or worldwide.
 
 ### Customer Reviews
 - **Eyebrow:** Customer Reviews
@@ -124,9 +124,9 @@ testimonials, 5-step process.)*
 
 ## 2. About Us  (`/about-us/`)
 
-**SEO title:** About Erawat Enterprise | Wooden Pallet Manufacturer in Gujarat
-**Meta description:** Erawat Enterprise is a Gujarat wooden pallet manufacturer making solar pallets and box
-pallets for solar companies in Gujarat, Rajasthan and Jaipur.
+**SEO title:** About Erawat Enterprise | Wooden Pallet Manufacturer in Jaipur
+**Meta description:** Erawat Enterprise is a wooden pallet manufacturer in Jaipur, making solar pallets and box
+pallets and delivering across India and worldwide, including Gujarat and Rajasthan.
 
 ### Banner
 - **Eyebrow:** Our Story
@@ -135,7 +135,8 @@ pallets for solar companies in Gujarat, Rajasthan and Jaipur.
 ### Who We Are
 - **Eyebrow:** Who We Are
 - **H2:** A Wooden Pallet Maker Focused on Solar
-- Erawat Enterprise is a wooden packaging manufacturer based in Gujarat. We make two things and we make them
+- Erawat Enterprise is a wooden packaging manufacturer in Jaipur, delivering across India and worldwide — including Gujarat
+  and Rajasthan. We make two things and we make them
   well — solar pallets and box pallets for the solar industry — plus custom versions of both, built to each
   customer's panel size.
 - Solar modules are large, heavy and easy to crack. Our pallets are designed around that: a firm, flat base,
@@ -161,7 +162,7 @@ certifications grid, "promise" grid.)*
 
 **SEO title:** Solar Pallets, Box Pallets & Custom Wooden Pallets | Erawat Enterprise
 **Meta description:** Solar pallets, box pallets, customised solar pallets and customised box pallets —
-wooden pallets made to size in Gujarat and supplied across Rajasthan and Jaipur.
+wooden pallets made to size and delivered across India and worldwide, including Gujarat, Rajasthan and Jaipur.
 
 ### Banner
 - **Eyebrow:** Our Products
@@ -221,8 +222,8 @@ Jump links: Solar Pallet · Box Pallet · Customised Solar Pallet · Customised 
   roads or export.
 - **Do you make pallets in custom sizes?** — Yes. Most of our pallets are made to size. Share your panel
   dimensions and quantity and we'll quote for your exact build.
-- **Do you deliver to Rajasthan and Jaipur?** — Yes. We supply solar pallets and box pallets across Gujarat
-  and Rajasthan, including Jaipur.
+- **Do you deliver to Rajasthan and Jaipur?** — Yes. We deliver solar pallets and box pallets anywhere in India and worldwide
+  — including Gujarat, Rajasthan and Jaipur.
 
 *(Removed: Warehousing Pallets, On-Site Packaging, ISPM 15 Pallet as a product, Packaging Consultation,
 Plywood Pallets & Boxes, generic Customised Packaging, all spec tables with invented load ratings.)*
@@ -233,7 +234,7 @@ Plywood Pallets & Boxes, generic Customised Packaging, all spec tables with inve
 
 **SEO title:** Wooden Pallet Manufacturing & ISPM 15 Services | Erawat Enterprise
 **Meta description:** Pallet design, bulk manufacturing, ISPM 15 heat treatment and delivery of solar pallets
-and box pallets across Gujarat, Rajasthan and Jaipur.
+and box pallets across India and worldwide, including Gujarat, Rajasthan and Jaipur.
 
 ### Banner
 - **Eyebrow:** From Design to Delivery
@@ -251,8 +252,8 @@ Everything it takes to get solar pallets and box pallets from drawing to dispatc
    - Same spec every order · Checked before dispatch · Scheduled supply
 3. **ISPM 15 Heat Treatment** ⚠️ — Heat treatment and IPPC marking for pallets and boxes that travel overseas.
    - 56 °C core for 30 minutes · IPPC mark on every unit · Treatment record provided ⚠️
-4. **Delivery** — Dispatch to your factory, warehouse or project site across Gujarat and Rajasthan,
-   including Jaipur.
+4. **Delivery** — Dispatch to your factory, warehouse or project site anywhere in India or worldwide,
+   including Gujarat, Rajasthan and Jaipur.
    - Factory & site delivery · Full truck loads · Planned to your schedule
 
 ### How It Works
@@ -266,8 +267,8 @@ month", "±1 mm", minimum order 10, 7–21 day lead time — all unverified.)*
 ## 5. ISPM 15  (`/ispm-15-packing/`)
 
 **SEO title:** ISPM 15 Heat Treated Pallets for Export | Erawat Enterprise
-**Meta description:** ISPM 15 heat-treated solar pallets and box pallets with IPPC marking for export, made in
-Gujarat by Erawat Enterprise.
+**Meta description:** ISPM 15 heat-treated solar pallets and box pallets with IPPC marking for export, from
+Erawat Enterprise, delivered across India and worldwide, including Gujarat, Rajasthan and Jaipur.
 
 ### Banner
 - **Eyebrow:** Heat Treated & IPPC Marked
@@ -313,9 +314,9 @@ Gujarat by Erawat Enterprise.
 
 ## 6. Contact  (`/contact-us/`)
 
-**SEO title:** Contact Erawat Enterprise | Solar Pallet Supplier in Gujarat
+**SEO title:** Contact Erawat Enterprise | Solar Pallets, Gujarat & Rajasthan
 **Meta description:** Get a quote for solar pallets, box pallets and custom wooden pallets. Call or WhatsApp
-+91 99310 60355 — supplying Gujarat, Rajasthan and Jaipur.
++91 99310 60355 — delivering across India and worldwide, including Gujarat, Rajasthan and Jaipur.
 
 ### Banner
 - **Eyebrow:** Get a Quote
@@ -335,8 +336,8 @@ Gujarat by Erawat Enterprise.
 - **Call:** +91 99310 60355
 - **WhatsApp:** Chat with us — send your panel size and get a quick quote
 - **Email:** Erawat005@gmail.com
-- **Location:** Gujarat, India (no map)
-- **We deliver to:** Gujarat · Rajasthan · Jaipur
+- **Location:** Khara No. 288/2, Bawdi, Sarna Doongar, Jhotwara, / Jaipur, Rajasthan 302012, India (no map)
+- **We deliver to:** All of India · Worldwide · Gujarat · Rajasthan · Jaipur
 
 ---
 
@@ -344,14 +345,14 @@ Gujarat by Erawat Enterprise.
 
 | File in `assets/images/` | Source | Used for | Alt text |
 |---|---|---|---|
-| `product-solar-pallet.jpg` | Real photo (long pallet on factory floor) | Solar Pallet, hero card | Wooden solar pallet for stacking solar panels — Erawat Enterprise, Gujarat |
-| `product-box-pallet.jpg` | Real photo (`Image products/1500-kg-ply-wood-pallet-box`), widened to 16:10 on white | Box Pallet, hero card | Wooden box pallet with a braced pine frame and panelled walls on a forklift pallet base — Erawat Enterprise, Gujarat |
+| `product-solar-pallet.jpg` | Real photo (long pallet on factory floor) | Solar Pallet, hero card | Wooden solar pallet for stacking solar panels — Erawat Enterprise, delivering across India and worldwide |
+| `product-box-pallet.jpg` | Real photo (`Image products/1500-kg-ply-wood-pallet-box`), widened to 16:10 on white | Box Pallet, hero card | Wooden box pallet with a braced pine frame and panelled walls on a forklift pallet base — Erawat Enterprise, delivering across India and worldwide |
 | `product-custom-solar-pallet.jpg` | Real photo (`Image products/solar-module-packaging`) | Customised Solar Pallet | Solar modules wrapped and strapped on customised wooden solar pallets at a solar project site |
-| `product-custom-box-pallet.jpg` | AI image first supplied as "box pallet" (panels in foam slots) | Customised Box Pallet | Customised wooden box pallet with foam partitions holding solar panels upright |
+| `product-custom-box-pallet.jpg` | AI image (workshop: custom box with cut-to-fit foam inserts; same file as `image-originals/detail-custom.png`), chosen by the user 2026-10-31 | Customised Box Pallet | Customised wooden box with cut-to-fit foam inserts being checked against its drawing in a packaging workshop |
 | `service-design.jpg` | Real pallet drawing, cropped to the drawing only (`Image products/…(2)`) | Services — Design & Sizing | Design drawing of a 2416 × 1110 mm wooden solar pallet |
 | `service-bulk.jpg` | Real photo (`Image products/pine-wooden-pallets`) | Services — Bulk Manufacturing | Stacks of finished long wooden solar pallets ready for dispatch |
 | `service-delivery.jpg` | Real photo (`Image products/solar-panel-wooden-pallet`) | Services — Delivery | Solar module pallets delivered to a solar power plant site |
-| `about-pallet-yard.jpg` | Real photo (`Image products/product-jpeg`) | About — Who We Are | Stacks of wooden pallets in a pallet yard in Gujarat |
+| `about-pallet-yard.jpg` | Real photo (`Image products/product-jpeg`) | About — Who We Are | Stacks of finished wooden pallets in a pallet yard — Erawat Enterprise |
 | `hero.jpg`, `banner-*.jpg`, `service-heattreatment.jpg` | existing AI images (real photos are too small for full-width use) | Home hero, page banners, Services — Heat Treatment | — / short descriptive alt |
 
 The real photos in `Image products/` are used with permission (confirmed by the user, 2026-10-27).

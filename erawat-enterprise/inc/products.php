@@ -24,7 +24,7 @@ function erawat_products() {
             'page_caption' => 'Long-format wooden pallet for stacked solar modules.',
             'image'        => 'product-solar-pallet.jpg',
             'fallback'     => null,
-            'alt'          => 'Wooden solar pallet for stacking solar panels — Erawat Enterprise, Gujarat',
+            'alt'          => 'Wooden solar pallet for stacking solar panels — Erawat Enterprise, delivering across India and worldwide',
             'icon'         => 'fa-layer-group',
         ],
         'box-pallet' => [
@@ -34,7 +34,7 @@ function erawat_products() {
             'page_caption' => 'Closed wooden box on a pallet base for solar panels.',
             'image'        => 'product-box-pallet.jpg',
             'fallback'     => null,
-            'alt'          => 'Wooden box pallet with a braced pine frame and panelled walls on a forklift pallet base — Erawat Enterprise, Gujarat',
+            'alt'          => 'Wooden box pallet with a braced pine frame and panelled walls on a forklift pallet base — Erawat Enterprise, delivering across India and worldwide',
             'icon'         => 'fa-box-open',
         ],
         'custom-solar-pallet' => [
@@ -54,7 +54,7 @@ function erawat_products() {
             'page_caption' => 'Your box size, partitions and lid style.',
             'image'        => 'product-custom-box-pallet.jpg',
             'fallback'     => null,
-            'alt'          => 'Customised wooden box pallet with foam partitions holding solar panels upright',
+            'alt'          => 'Customised wooden box with cut-to-fit foam inserts being checked against its drawing in a packaging workshop',
             'icon'         => 'fa-cubes',
         ],
     ];

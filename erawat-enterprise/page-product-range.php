@@ -43,7 +43,7 @@ $faqs = [
     [ 'q' => 'What is a solar pallet?', 'a' => 'A solar pallet is a long wooden pallet made to carry stacked solar modules. Its size matches the panel, so the stack does not overhang or shift during transport.' ],
     [ 'q' => 'What is the difference between a solar pallet and a box pallet?', 'a' => 'A solar pallet is an open, flat base. A box pallet adds walls and a lid that fully enclose the panels — better for long journeys, rough roads or export.' ],
     [ 'q' => 'Do you make pallets in custom sizes?', 'a' => "Yes. Most of our pallets are made to size. Share your panel dimensions and quantity and we'll quote for your exact build." ],
-    [ 'q' => 'Do you deliver to Rajasthan and Jaipur?', 'a' => 'Yes. We supply solar pallets and box pallets across Gujarat and Rajasthan, including Jaipur.' ],
+    [ 'q' => 'Do you deliver to Rajasthan and Jaipur?', 'a' => 'Yes. We deliver solar pallets and box pallets anywhere in India and worldwide — including Gujarat, Rajasthan and Jaipur.' ],
 ];
 ?>
 

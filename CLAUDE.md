@@ -1,7 +1,10 @@
 # Project overview
 
-Marketing website for **Erawat Enterprise**, a Gujarat (India) maker of wooden solar pallets and box
-pallets for solar module manufacturers and EPC companies. Only four products: Solar Pallet, Box Pallet,
+Marketing website for **Erawat Enterprise**, a Jaipur (Rajasthan, India) maker of wooden solar pallets and box
+pallets for solar module manufacturers and EPC companies, delivering anywhere in India and worldwide. Gujarat /
+Rajasthan / Jaipur are named **for SEO only**, always as "across India and worldwide, including Gujarat,
+Rajasthan and Jaipur" — never
+as a limit on where Erawat delivers, and never "based in" or "made in" Gujarat. Only four products: Solar Pallet, Box Pallet,
 Customised Solar Pallet, Customised Box Pallet. Six pages: Home, About Us, Product Range, Services,
 ISPM 15 Packing, Contact Us. SEO targets: solar pallet, wooden pallet, box pallet, solar, pallet,
 solar box, Erawat, Erawat Enterprise — each also "in Gujarat / Rajasthan / Jaipur".
@@ -75,7 +78,9 @@ No build system: no `package.json`, no bundler, no tests, no linter. Plain PHP, 
   output is skipped when Yoast SEO or Rank Math is active. Titles/descriptions live in `erawat_seo_pages()`.
 - Contact details (phone, WhatsApp, email, LinkedIn) are `ERAWAT_PHONE`, `ERAWAT_PHONE_TEL`,
   `ERAWAT_WHATSAPP`, `ERAWAT_EMAIL`, `ERAWAT_LINKEDIN` in `functions.php`; `erawat_url( $slug )`
-  returns a page URL with trailing slash.
+  returns a page URL with trailing slash. The address is `ERAWAT_ADDRESS_STREET` / `_CITY` / `_REGION` /
+  `_POSTCODE`; `erawat_address_html()` prints it as two escaped lines (footer and contact panel, in an
+  `<address>`), and the LocalBusiness schema in `inc/seo.php` reads the same constants.
 - Prefix everything with `erawat_` (functions), `erawat-` (asset handles), `ERAWAT_` (constants).
   Text domain is `erawat-enterprise`.
 - Paths use the `ERAWAT_DIR` / `ERAWAT_URI` constants, defined in `functions.php`.
@@ -151,7 +156,8 @@ No build system: no `package.json`, no bundler, no tests, no linter. Plain PHP, 
   bottom, `url('../images/...')`). Originals are in `image-originals/`.
 - Photo sources: the product, service (except heat treatment) and About photos are real photos the user
   supplied in `Image products/` (sourced from IndiaMART listings); the user confirmed on 2026-10-27 that
-  Erawat has permission to use them. `product-custom-box-pallet.jpg`, `hero.jpg`, the `banner-*.jpg` and
+  Erawat has permission to use them. `product-custom-box-pallet.jpg` (since 2026-10-31 the workshop image of a
+  box with foam inserts — same file as `image-originals/detail-custom.png`), `hero.jpg`, the `banner-*.jpg` and
   `service-heattreatment.jpg` are AI-generated. Don't add photos copied from other companies' sites
   without the user confirming permission. Most real photos are only 500px wide — don't use them as
   full-width backgrounds.
@@ -196,10 +202,11 @@ range, stats, testimonials, Cinzel fonts, top bar) is in git history before the 
 # Placeholder content — never present this as fact
 
 The invented filler from the first build (stats, testimonials, fake "Plot No. XX" address, fake map,
-"ISO Compliant", NPPO-registered kilns) has been removed. The address reads just "Gujarat, India" and the
-client does not want a map; there are no business hours and no "quote within 24 hours" promise (removed at
-the client's request — don't add them back). Delivery to Gujarat, Rajasthan and Jaipur is confirmed by the
-client. Still unconfirmed:
+"ISO Compliant", NPPO-registered kilns) has been removed. The address is the real one from the client's
+business card (Khara No. 288/2, Bawdi, Sarna Doongar, Jhotwara, Jaipur, Rajasthan 302012; added
+2026-10-31) and the client does not want a map; there are no business hours and no "quote within 24 hours" promise (removed at
+the client's request — don't add them back). The client delivers anywhere in India and worldwide (confirmed
+2026-10-31); Gujarat, Rajasthan and Jaipur are SEO focus areas, not limits. Still unconfirmed:
 
 - ISPM 15 heat treatment / IPPC marking and treatment records (Home, Services, ISPM 15 page, footer badge)
 - "Strong, seasoned wood" and sample pallets on request

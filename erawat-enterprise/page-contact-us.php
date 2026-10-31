@@ -106,7 +106,7 @@ $selected_product = isset( $_GET['product'] ) ? sanitize_key( wp_unslash( $_GET[
                     <span class="contact-list__icon contact-list__icon--wood" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></span>
                     <div>
                         <h3>Location</h3>
-                        <p class="contact-list__value">Gujarat, India</p>
+                        <address class="contact-list__address"><?php echo erawat_address_html(); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped in the helper ?></address>
                     </div>
                 </li>
             </ul>
@@ -114,6 +114,8 @@ $selected_product = isset( $_GET['product'] ) ? sanitize_key( wp_unslash( $_GET[
             <div class="contact-panel__deliver">
                 <h3>We deliver to</h3>
                 <ul class="chip-list chip-list--sm">
+                    <li class="chip"><i class="fas fa-truck-fast" aria-hidden="true"></i> All of India</li>
+                    <li class="chip"><i class="fas fa-globe" aria-hidden="true"></i> Worldwide</li>
                     <li class="chip"><i class="fas fa-location-dot" aria-hidden="true"></i> Gujarat</li>
                     <li class="chip"><i class="fas fa-location-dot" aria-hidden="true"></i> Rajasthan</li>
                     <li class="chip"><i class="fas fa-location-dot" aria-hidden="true"></i> Jaipur</li>
