@@ -7,14 +7,14 @@
     <div class="container split">
         <figure class="split__media photo-frame" data-aos="clip-up">
             <img src="<?php echo esc_url( erawat_image_url( 'about-pallet-yard.jpg' ) ); ?>"
-                 alt="Stacks of wooden pallets in a pallet yard in Gujarat"
+                 alt="Stacks of finished wooden pallets in a pallet yard — Erawat Enterprise"
                  width="500" height="375" loading="lazy" decoding="async">
         </figure>
 
         <div class="split__body">
             <span class="eyebrow" data-aos="fade-up">Who We Are</span>
             <h2 id="who-title" data-split>A Wooden Pallet Maker Focused on Solar</h2>
-            <p class="statement" data-aos="fade-up">Erawat Enterprise is a wooden packaging manufacturer based in Gujarat. <span class="statement__muted">We make two things and we make them well — solar pallets and box pallets for the solar industry — plus custom versions of both, built to each customer's panel size.</span></p>
+            <p class="statement" data-aos="fade-up">Erawat Enterprise is a wooden packaging manufacturer in Jaipur, delivering across India and worldwide — including Gujarat and Rajasthan. <span class="statement__muted">We make two things and we make them well — solar pallets and box pallets for the solar industry — plus custom versions of both, built to each customer's panel size.</span></p>
             <p data-aos="fade-up">Solar modules are large, heavy and easy to crack. Our pallets are designed around that: a firm, flat base, the right board spacing, foam where the glass needs it, and a fit that stops panels shifting in transit.</p>
             <ul class="chip-list" data-aos="fade-up">
                 <li class="chip"><i class="fas fa-layer-group" aria-hidden="true"></i> Solar Pallets</li>

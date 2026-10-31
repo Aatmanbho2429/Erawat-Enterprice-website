@@ -32,7 +32,7 @@
                 <a class="footer-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                     <img src="<?php echo esc_url( erawat_image_url( 'logo-erawat-white.png' ) ); ?>" alt="Erawat Enterprise" width="780" height="252" loading="lazy" decoding="async">
                 </a>
-                <p class="footer-tagline">Erawat Enterprise makes solar pallets, box pallets and custom wooden pallets for solar module makers and EPC companies across Gujarat and Rajasthan.</p>
+                <p class="footer-tagline">Erawat Enterprise makes solar pallets, box pallets and custom wooden pallets for solar module makers and EPC companies across India and worldwide, including Gujarat and Rajasthan.</p>
                 <ul class="footer-badges">
                     <li><i class="fas fa-ruler-combined" aria-hidden="true"></i> Made to Size</li>
                     <li><i class="fas fa-temperature-high" aria-hidden="true"></i> ISPM 15 Heat Treatment</li>
@@ -83,13 +83,13 @@
                     </li>
                     <li>
                         <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                        <span>Gujarat, India</span>
+                        <address class="footer-address"><?php echo erawat_address_html(); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped in the helper ?></address>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <p class="footer-areas">Solar pallet &amp; box pallet supplier in <strong>Gujarat</strong> · <strong>Rajasthan</strong> · <strong>Jaipur</strong></p>
+        <p class="footer-areas">Solar pallet &amp; box pallet supplier across India and worldwide, including <strong>Gujarat</strong> · <strong>Rajasthan</strong> · <strong>Jaipur</strong></p>
     </div>
 
     <!-- Decorative wordmark -->

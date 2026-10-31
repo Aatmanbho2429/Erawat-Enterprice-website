@@ -12,7 +12,7 @@ $steps = $args['steps'] ?? [
     [ 'title' => 'Share your size', 'text' => 'Panel dimensions, panels per pallet and quantity.' ],
     [ 'title' => 'Get a quote',     'text' => 'We confirm the design and price. Sample pallet on request.' ],
     [ 'title' => 'We build',        'text' => 'Cut, assembled and checked — heat-treated if you export.' ],
-    [ 'title' => 'We deliver',      'text' => 'To your factory or project site across Gujarat and Rajasthan.' ],
+    [ 'title' => 'We deliver',      'text' => 'To your factory or project site, anywhere in India or worldwide.' ],
 ];
 $layout = ( $args['layout'] ?? 'vertical' ) === 'horizontal' ? 'horizontal' : 'vertical';
 ?>

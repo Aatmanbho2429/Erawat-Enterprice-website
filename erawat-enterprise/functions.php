@@ -16,6 +16,12 @@ define( 'ERAWAT_WHATSAPP',  'https://wa.me/919931060355' );
 define( 'ERAWAT_EMAIL',     'Erawat005@gmail.com' );
 define( 'ERAWAT_LINKEDIN',  'https://www.linkedin.com/in/erawat-enterprise-145601431' );
 
+/* Business address (from the client's business card) — footer, contact page and schema */
+define( 'ERAWAT_ADDRESS_STREET',   'Khara No. 288/2, Bawdi, Sarna Doongar, Jhotwara' );
+define( 'ERAWAT_ADDRESS_CITY',     'Jaipur' );
+define( 'ERAWAT_ADDRESS_REGION',   'Rajasthan' );
+define( 'ERAWAT_ADDRESS_POSTCODE', '302012' );
+
 /* Auto-create pages on theme activation */
 require_once ERAWAT_DIR . '/inc/setup-pages.php';
 
@@ -215,6 +221,14 @@ add_action( 'wp_ajax_nopriv_erawat_contact', 'erawat_handle_contact_form' );
  */
 function erawat_url( $slug = '' ) {
     return home_url( '/' . ( $slug ? trailingslashit( $slug ) : '' ) );
+}
+
+/**
+ * The business address as two escaped lines: street, then city / state / PIN / country.
+ */
+function erawat_address_html() {
+    return esc_html( ERAWAT_ADDRESS_STREET . ',' ) . '<br>'
+         . esc_html( ERAWAT_ADDRESS_CITY . ', ' . ERAWAT_ADDRESS_REGION . ' ' . ERAWAT_ADDRESS_POSTCODE . ', India' );
 }
 
 /**

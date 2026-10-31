@@ -4,14 +4,14 @@ $products = erawat_products();
 
 $marquee_items = [
     'Solar Pallets', 'Box Pallets', 'Custom Sizes', 'ISPM 15 Heat Treated',
-    'Bulk Supply', 'Gujarat', 'Rajasthan', 'Jaipur',
+    'Bulk Supply', 'All-India Delivery', 'Worldwide Delivery', 'Gujarat', 'Rajasthan', 'Jaipur',
 ];
 
 $reasons = [
     [ 'icon' => 'fa-ruler-combined', 'title' => 'Made to your size',    'text' => 'Every pallet is cut to your panel dimensions. No loose fit, no wasted space.' ],
     [ 'icon' => 'fa-tree',           'title' => 'Strong, seasoned wood', 'text' => 'Firm construction that takes forklift handling and long truck journeys.' ],
     [ 'icon' => 'fa-globe',          'title' => 'Export ready',          'text' => 'ISPM 15 heat treatment and IPPC marking for export orders.' ],
-    [ 'icon' => 'fa-boxes-stacked',  'title' => 'Bulk supply',           'text' => 'Steady production for repeat orders, delivered across Gujarat and Rajasthan.' ],
+    [ 'icon' => 'fa-boxes-stacked',  'title' => 'Bulk supply',           'text' => 'Steady production for repeat orders, delivered anywhere in India or worldwide.' ],
 ];
 ?>
 
@@ -32,7 +32,7 @@ $reasons = [
 
         <div class="hero__bottom">
             <div class="hero__content">
-                <p class="hero__text">Strong wooden pallets and box pallets, made to the exact size of your solar modules — for manufacturers and EPC companies in Gujarat, Rajasthan and Jaipur.</p>
+                <p class="hero__text">Strong wooden pallets and box pallets, made to the exact size of your solar modules — for manufacturers and EPC companies across India and worldwide, including Gujarat, Rajasthan and Jaipur.</p>
 
                 <div class="hero__actions">
                     <a href="<?php echo esc_url( erawat_url( 'contact-us' ) ); ?>" class="btn btn--white btn--lg" data-magnetic>
