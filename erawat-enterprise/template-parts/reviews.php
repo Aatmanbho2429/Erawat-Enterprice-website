@@ -28,7 +28,7 @@ $reviews = erawat_reviews();
     </div>
 
     <div class="reviews-marquee" data-aos="fade-up">
-        <div class="reviews-track">
+        <div class="reviews-track" style="--reviews-count: <?php echo (int) count( $reviews ); ?>">
             <?php foreach ( [ false, true ] as $is_copy ) : ?>
                 <div class="reviews-list"<?php echo $is_copy ? ' aria-hidden="true"' : ''; ?>>
                     <?php foreach ( $reviews as $review ) :
