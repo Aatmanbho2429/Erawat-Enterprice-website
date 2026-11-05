@@ -965,13 +965,15 @@ a:hover { color: var(--wood); }
 }
 
 /* ─── CUSTOMER REVIEWS (on the cream canvas) ─── */
-/* Auto-scrolling row: the list is rendered twice, so sliding the track by -50% loops seamlessly. */
+/* Auto-scrolling row: the list is rendered twice, so sliding the track by -50% loops seamlessly.
+   The loop lasts 6s per review (--reviews-count is set on the track), so the speed stays the same
+   however many reviews there are. */
 .reviews-marquee {
   overflow: hidden; padding-block: .5rem 1rem;
   -webkit-mask-image: linear-gradient(90deg, transparent, black 7%, black 93%, transparent);
           mask-image: linear-gradient(90deg, transparent, black 7%, black 93%, transparent);
 }
-.reviews-track { display: flex; width: max-content; animation: reviewsScroll 80s linear infinite; }
+.reviews-track { display: flex; width: max-content; animation: reviewsScroll calc(var(--reviews-count, 4) * 6s) linear infinite; }
 .reviews-marquee:hover .reviews-track,
 .reviews-marquee:focus-within .reviews-track { animation-play-state: paused; }
 .reviews-list { display: flex; flex: none; gap: 1.25rem; padding-right: 1.25rem; }

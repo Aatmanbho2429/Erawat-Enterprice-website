@@ -162,8 +162,9 @@ No build system: no `package.json`, no bundler, no tests, no linter. Plain PHP, 
 - Photo sources: the product, service (except heat treatment) and About photos are real photos the user
   supplied in `Image products/` (sourced from IndiaMART listings); the user confirmed on 2026-10-27 that
   Erawat has permission to use them. `product-custom-box-pallet.jpg` (since 2026-10-31 the workshop image of a
-  box with foam inserts — same file as `image-originals/detail-custom.png`), `hero.jpg`, the `banner-*.jpg` and
-  `service-heattreatment.jpg` are AI-generated. Don't add photos copied from other companies' sites
+  box with foam inserts — same file as `image-originals/detail-custom.png`), the `banner-*.jpg` and
+  `service-heattreatment.jpg` are AI-generated. `hero.jpg` (stacks of wooden pallets in a warehouse) is a real
+  photo the user supplied on 2026-11-05; its original is `image-originals/hero.webp`. It is only 1004px wide. Don't add photos copied from other companies' sites
   without the user confirming permission. Most real photos are only 500px wide — don't use them as
   full-width backgrounds.
 
